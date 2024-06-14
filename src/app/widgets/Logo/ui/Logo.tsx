@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import s from './Logo.module.scss'
-import { Text } from 'stone-kit'
+import { Flex, Text } from 'stone-kit'
+import { ILogoProps } from './Logo.types'
+import classNames from 'classnames'
 
-interface ILogoProps {
-	uk?: boolean
-}
+export const Logo = ({ uk = false, variant = 'black', between = false }: ILogoProps) => {
+	const cx = classNames.bind(s)
 
-export const Logo = ({ uk = false }: ILogoProps) => {
 	return (
-		<div className={s.wrapper}>
+		<Flex className={cx(s.wrapper, { [s.wrapperBetween]: between })}>
 			<Image
-				src={'/Logo.svg'}
+				src={variant === 'white' ? '/LogoWhite.svg' : '/LogoBlack.svg'}
 				width={81}
 				height={16}
 				alt='Лого'
@@ -18,11 +18,11 @@ export const Logo = ({ uk = false }: ILogoProps) => {
 			/>
 			{uk && (
 				<Text
-					className={s.uk}
+					className={cx(s.uk, s[`uk_${variant}`])}
 					html='управляющая<br/>компания'
 				/>
 			)}
-		</div>
+		</Flex>
 	)
 }
 

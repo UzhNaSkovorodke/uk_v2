@@ -3,7 +3,7 @@ import { Text } from 'stone-kit'
 import s from './Intro.module.scss'
 import Image from 'next/image'
 import { RangeCircle } from '@/src/app/widgets/RangeCircle'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay } from 'swiper/modules'
 import { Swiper as SwiperClass } from 'swiper/types'
@@ -14,6 +14,7 @@ import 'swiper/css/effect-fade'
 export const Intro = () => {
 	const [activeIndex, setActiveIndex] = useState(1)
 	const [swiper, setSwiper] = useState<SwiperClass>()
+	const swiperRef = useRef<SwiperClass | null>(null)
 
 	useEffect(() => {
 		if (!swiper) setActiveIndex(1)
@@ -45,9 +46,9 @@ export const Intro = () => {
 				effect={'fade'}
 				loop
 				loopAddBlankSlides
-				onInit={(init) => setSwiper(init)}
-				onSlideChange={() => setActiveIndex((swiper?.realIndex as number) + 1)}
-				className={s.slider + ' ' + s.container}>
+				onSwiper={(swiper: SwiperClass) => (swiperRef.current = swiper)}
+				onSlideChange={() => setActiveIndex((swiperRef.current?.realIndex as number) + 1)}
+				className={s.slider}>
 				{slides.map((slide, i) => (
 					<SwiperSlide
 						className={s.slide}
@@ -66,7 +67,9 @@ export const Intro = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<RangeCircle activeSlide={activeIndex}></RangeCircle>
+			<RangeCircle
+				activeSlide={activeIndex}
+				additionalClass={s.range}></RangeCircle>
 		</div>
 	)
 }

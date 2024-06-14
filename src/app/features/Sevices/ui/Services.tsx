@@ -27,6 +27,7 @@ export const Services = ({}: IServicesProps) => {
 			image: '/services3.webp',
 		},
 	]
+
 	if (!servicesList) return null
 	return (
 		<Flex className={s.root}>

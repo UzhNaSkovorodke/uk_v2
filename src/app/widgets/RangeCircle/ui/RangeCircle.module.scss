@@ -1,7 +1,5 @@
 .root {
   position: absolute;
-  bottom: 16px;
-  right: 16px;
   width: 32px;
   height: 32px;
   z-index: 1;
@@ -34,5 +32,30 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
-  color: #ffffff;
+
+  &_light {
+    color: #ffffff;
+  }
+
+  &_dark {
+    color: #141416;
+  }
+}
+
+//variants
+
+.bg_light {
+  stroke: #ffffff7f;
+}
+
+.bg_dark {
+  stroke: #e6e8ec;
+}
+
+.fg_light {
+  stroke: #ffffff;
+}
+
+.fg_dark {
+  stroke: #141416;
 }

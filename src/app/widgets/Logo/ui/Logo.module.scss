@@ -1,7 +1,11 @@
 .wrapper {
-	display: flex;
 	align-items: center;
 	gap: 8px;
+}
+
+.wrapperBetween {
+	width: 100%;
+	justify-content: space-between;
 }
 
 .uk {
@@ -10,5 +14,12 @@
 	font-weight: 600;
 	letter-spacing: 0.11em;
 	text-transform: uppercase;
-	color: #141416;
+
+	&_black {
+		color: #141416;
+	}
+
+	&_white {
+		color: #ffffff;
+	}
 }

@@ -1,0 +1,71 @@
+.root {
+	padding: 60px 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+}
+
+.title {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	text-align: left;
+	color: #141416;
+}
+
+.slider {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.sliderWrapper {
+	align-items: center;
+}
+
+.slide {
+	width: 64px;
+	height: 64px;
+	opacity: 1;
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.image {
+	opacity: 0.3;
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.activeImage {
+	width: 120px;
+	height: 120px;
+	opacity: 1;
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.inactiveSlide {}
+
+.nameWrapper {
+	position: relative;
+}
+
+.jobTtitle {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #777e90;
+}
+
+.nameTitle {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	color: #141416;
+}
+
+.range {
+	top: 0;
+	right: 0;
+}

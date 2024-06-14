@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "uk-stone-v2-front",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
@@ -21,7 +22,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "sass": "^1.77.4",
-    "stone-kit": "^0.0.34",
+    "stone-kit": "^0.0.35",
     "typescript": "^5"
   }
 }

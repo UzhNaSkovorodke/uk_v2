@@ -4,6 +4,7 @@ import s from './layout.module.scss'
 import './globals.scss'
 import 'stone-kit/dist/style.css'
 import { Header } from './features/Header'
+import { Footer } from './features/Footer'
 
 const ttHovesPro = localFont({
 	src: [
@@ -46,8 +47,9 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body className={ttHovesPro.className}>
-				<Header></Header>
+				<Header />
 				<div className={s.contentWrapper}>{children}</div>
+				<Footer />
 			</body>
 		</html>
 	)

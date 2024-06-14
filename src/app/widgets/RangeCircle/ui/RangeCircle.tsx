@@ -1,19 +1,36 @@
 import { Text } from 'stone-kit'
 import s from './RangeCircle.module.scss'
+import classNames from 'classnames'
 
-export const RangeCircle = ({ activeSlide }: { activeSlide: number }) => {
+export const CIRCLE_VARIANTS = {
+	light: 'light',
+	dark: 'dark',
+}
+
+export type circleVariant = keyof typeof CIRCLE_VARIANTS
+
+export const RangeCircle = ({
+	activeSlide,
+	variant = 'light',
+	additionalClass = ''
+}: {
+	activeSlide: number
+	additionalClass?: string
+	variant?: circleVariant
+}) => {
 	const radius = 16
 	const circumference = 2 * Math.PI * radius
+	const cx = classNames.bind(s)
 
 	return (
-		<div className={s.root}>
+		<div className={cx(s.root, additionalClass)}>
 			<svg
 				width={`${radius * 2}`}
 				height={`${radius * 2}`}
 				viewBox={`0 0 ${radius * 2} ${radius * 2}`}
 				className={s.progress}>
 				<circle
-					className={s.bg}
+					className={cx(s.bg, s[`bg_` + variant])}
 					cx={`${radius}`}
 					cy={`${radius}`}
 					r={`${radius - 1}`}
@@ -23,7 +40,7 @@ export const RangeCircle = ({ activeSlide }: { activeSlide: number }) => {
 				/>
 				<circle
 					key={activeSlide}
-					className={s.fg}
+					className={cx(s.fg, s[`fg_` + variant])}
 					cx={`${radius}`}
 					cy={`${radius}`}
 					r={`${radius - 1}`}
@@ -33,7 +50,7 @@ export const RangeCircle = ({ activeSlide }: { activeSlide: number }) => {
 					strokeWidth='1'
 				/>
 			</svg>
-			<Text className={s.activeNumber}>{activeSlide}</Text>
+			<Text className={cx(s.activeNumber, s[`activeNumber_` + variant])}>{activeSlide}</Text>
 		</div>
 	)
 }
