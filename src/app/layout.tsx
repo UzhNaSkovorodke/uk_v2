@@ -1,10 +1,10 @@
+import 'stone-kit/dist/style.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import s from './layout.module.scss'
-import './globals.scss'
-import 'stone-kit/dist/style.css'
 import { Header } from './features/Header'
 import { Footer } from './features/Footer'
+import s from './layout.module.scss'
+import './globals.scss'
 
 const ttHovesPro = localFont({
 	src: [

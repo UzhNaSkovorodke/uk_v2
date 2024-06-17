@@ -1,4 +1,7 @@
 .root {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
 	padding: 32px 0 40px 0;
 	border-top-left-radius: 24px;
 	border-top-right-radius: 24px;
@@ -6,5 +9,57 @@
 }
 
 .logoWrapper {
+	width: 100%;
 	padding: 0 16px;
+}
+
+.infoList {
+	width: 100%;
+	padding: 0 32px;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #ffffff;
+}
+
+.infoCard {
+	width: 100%;
+	flex-direction: column;
+	gap: 8px;
+	align-items: self-start;
+	padding: 32px 0;
+
+	&:not(:first-child) {
+		border-top: 1px solid #23262F;
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.infoTitle {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #777e90;
+}
+
+.infoText {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	color: #ffffff;
+}
+
+.btnWrapper {
+	width: 100%;
+	padding: 0 32px;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
 }

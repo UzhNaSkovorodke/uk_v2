@@ -1,6 +1,7 @@
 html {
   height: 100%;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 
   -webkit-tap-highlight-color: transparent;
 }
@@ -12,6 +13,12 @@ main {
 body {
   height: 100%;
   margin: 0;
+}
+
+body.disable-scroll {
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
 }
 
 *,

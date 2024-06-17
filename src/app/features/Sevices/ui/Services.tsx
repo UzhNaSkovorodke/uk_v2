@@ -1,36 +1,46 @@
+'use client'
 import Image from 'next/image'
-import s from './Services.module.scss'
 import { Button, Flex, NewIcon, Text } from 'stone-kit'
+import { useState } from 'react'
+import { ModalServices } from '../../ModalServices'
+import s from './Services.module.scss'
 
-interface IServicesProps {
-	className?: string
-}
+export const Services = ({}) => {
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+	const [activeService, setActiveService] = useState<number>(0)
 
-export const Services = ({}: IServicesProps) => {
 	const servicesList = [
 		{
 			title: 'Бытовые услуги',
 			description: 'Поддерживаем дома и придомовые территории',
+			text: 'Управляющая офисная компания «STONE» — это ваш надежный партнер в создании комфортных и эффективных условий работы. Мы предлагаем полный спектр услуг по управлению и обслуживанию офисных помещений, включая техническое обслуживание, клининг, охрану и обеспечение комфорта сотрудников. Наша команда профессионалов обеспечивает высокий уровень сервиса и оперативное решение любых возникающих вопросов. С «STONE» вы можете быть уверены, что ваш офис будет работать как часы, позволяя вам сосредоточиться на развитии бизнеса. Мы берем на себя заботы о вашем рабочем пространстве, предоставляя комплексные решения для улучшения его функциональности и эстетики. Доверяйте экспертам — выбирайте «STONE» и наслаждайтесь безупречным сервисом.',
 			btnText: 'Подробнее',
 			image: '/services1.webp',
+			pageImage: '/servicePage.webp',
 		},
 		{
-			title: 'Бытовые услуги',
-			description: 'Поддерживаем дома и придомовые территории',
+			title: 'Лакшери услуги',
+			description: 'Поддерживаем дома и не только',
 			btnText: 'Подробнее',
+			text: 'Лухари текст',
 			image: '/services2.webp',
+			pageImage: '/servicePage.webp',
 		},
 		{
-			title: 'Бытовые услуги',
-			description: 'Поддерживаем дома и придомовые территории',
+			title: 'Пятерочка',
+			description: 'Поддерживаем',
 			btnText: 'Подробнее',
+			text: 'Кушанье',
 			image: '/services3.webp',
+			pageImage: '/servicePage.webp',
 		},
 	]
 
 	if (!servicesList) return null
 	return (
-		<Flex className={s.root}>
+		<Flex
+			className={s.root}
+			id='services'>
 			<Text className={s.title}>Услуги</Text>
 			<Flex className={s.servicesList}>
 				{servicesList.map((item, i) => {
@@ -57,7 +67,8 @@ export const Services = ({}: IServicesProps) => {
 								variant='whiteStroke'
 								size='medium'
 								as='button'
-								additionalClass={s.cardBtn}>
+								additionalClass={s.cardBtn}
+								onClick={() => (setIsModalOpen(true), setActiveService(i))}>
 								{item.btnText}
 							</Button>
 						</Flex>
@@ -78,6 +89,11 @@ export const Services = ({}: IServicesProps) => {
 				}>
 				Оставить обращение
 			</Button>
+			<ModalServices
+				isModalOpen={isModalOpen}
+				setIsModalOpen={setIsModalOpen}
+				service={servicesList[activeService]}
+			/>
 		</Flex>
 	)
 }

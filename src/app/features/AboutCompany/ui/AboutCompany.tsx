@@ -37,7 +37,9 @@ export const AboutCompany = ({}: IAboutCompanyProps) => {
 	if (!aboutList || aboutList.length < 1) return null
 
 	return (
-		<Flex className={s.root}>
+		<Flex
+			className={s.root}
+			id='about'>
 			<Text className={s.title}>О компании</Text>
 			<Flex className={s.aboutList}>
 				{aboutList.map((a, i) => {
