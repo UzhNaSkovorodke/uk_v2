@@ -6,7 +6,10 @@ interface IFormModalContext {
 	setIsFormModalOpen: Dispatch<SetStateAction<boolean>>
 }
 
-export const FormContext = createContext<IFormModalContext | null>(null)
+export const FormContext = createContext<IFormModalContext>({
+	isFormModalOpen: false,
+	setIsFormModalOpen: () => {},
+})
 
 export const FormProvider = ({ children }: { children?: React.ReactNode }) => {
 	const [isFormModalOpen, setIsFormModalOpen] = useState<boolean>(false)

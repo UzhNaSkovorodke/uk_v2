@@ -10,8 +10,8 @@ import s from './Services.module.scss'
 export const Services = ({}) => {
 	const form = useContext(FormContext)
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+	const {isFormModalOpen, setIsFormModalOpen} = form
 	const [activeService, setActiveService] = useState<number>(0)
-	const [isFormOpen, setIsFormOpen] = useState<boolean>(form?.isFormModalOpen ?? false)
 
 	const servicesList = [
 		{
@@ -102,13 +102,12 @@ export const Services = ({}) => {
 				setIsModalOpen={setIsModalOpen}
 				service={servicesList[activeService]}
 			/>
-			{form && (
+			{isFormModalOpen && (
 				<ModalForm
-					isFormOpen={isFormOpen}
-					setIsFormOpen={setIsFormOpen}
+					isFormOpen={isFormModalOpen}
+					setIsFormOpen={setIsFormModalOpen}
 				/>
 			)}
 		</Flex>
 	)
 }
-
