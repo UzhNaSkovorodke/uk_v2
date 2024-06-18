@@ -1,5 +1,6 @@
 import 'stone-kit/dist/style.css'
 import type { Metadata } from 'next'
+import { FormProvider } from './providers/formProvider'
 import localFont from 'next/font/local'
 import { Header } from './features/Header'
 import { Footer } from './features/Footer'
@@ -46,11 +47,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={ttHovesPro.className}>
-				<Header />
-				<div className={s.contentWrapper}>{children}</div>
-				<Footer />
-			</body>
+			<FormProvider>
+				<body className={ttHovesPro.className}>
+					<Header />
+					<div className={s.contentWrapper}>{children}</div>
+					<Footer />
+				</body>
+			</FormProvider>
 		</html>
 	)
 }

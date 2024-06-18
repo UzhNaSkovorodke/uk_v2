@@ -1,13 +1,17 @@
 'use client'
 import Image from 'next/image'
 import { Button, Flex, NewIcon, Text } from 'stone-kit'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ModalServices } from '../../ModalServices'
+import { ModalForm } from '../../ModalForm'
+import { FormContext } from '@/src/app/providers/formProvider/ui/formProvider'
 import s from './Services.module.scss'
 
 export const Services = ({}) => {
+	const form = useContext(FormContext)
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 	const [activeService, setActiveService] = useState<number>(0)
+	const [isFormOpen, setIsFormOpen] = useState<boolean>(form?.isFormModalOpen ?? false)
 
 	const servicesList = [
 		{
@@ -35,6 +39,8 @@ export const Services = ({}) => {
 			pageImage: '/servicePage.webp',
 		},
 	]
+
+	useEffect(() => {}, [form?.isFormModalOpen])
 
 	if (!servicesList) return null
 	return (
@@ -79,6 +85,7 @@ export const Services = ({}) => {
 				width='full'
 				variant='blue'
 				as='button'
+				size='large'
 				additionalClass={s.servicesBtn}
 				post={
 					<NewIcon
@@ -86,7 +93,8 @@ export const Services = ({}) => {
 						deg='-90'
 						color='white'
 					/>
-				}>
+				}
+				onClick={() => form?.setIsFormModalOpen(true)}>
 				Оставить обращение
 			</Button>
 			<ModalServices
@@ -94,6 +102,12 @@ export const Services = ({}) => {
 				setIsModalOpen={setIsModalOpen}
 				service={servicesList[activeService]}
 			/>
+			{form && (
+				<ModalForm
+					isFormOpen={isFormOpen}
+					setIsFormOpen={setIsFormOpen}
+				/>
+			)}
 		</Flex>
 	)
 }

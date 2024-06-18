@@ -1,11 +1,13 @@
 'use client'
 import { Logo } from '@/src/app/widgets/Logo'
 import { Button, Flex, Modal, NewIcon } from 'stone-kit'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import s from './Header.module.scss'
+import { FormContext } from '@/src/app/providers/formProvider/ui/formProvider'
 
 export const Header = ({}) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+	const form = useContext(FormContext)
 
 	const menuList = [
 		{
@@ -60,9 +62,12 @@ export const Header = ({}) => {
 					variant='gray'
 					size='small'
 					as='button'
-					onClick={() => setIsModalOpen((prev) => !prev)}>
+					onClick={() => (
+						!form?.isFormModalOpen && setIsModalOpen((prev) => !prev),
+						form?.isFormModalOpen && form?.setIsFormModalOpen((prev) => !prev)
+					)}>
 					<NewIcon
-						name={isModalOpen ? 'burgerClose' : 'burger'}
+						name={isModalOpen || form?.isFormModalOpen ? 'burgerClose' : 'burger'}
 						color='#141416'
 						size='16'
 					/>

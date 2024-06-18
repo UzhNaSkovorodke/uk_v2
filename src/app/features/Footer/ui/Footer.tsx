@@ -1,13 +1,19 @@
+'use client'
 import { Logo } from '@/src/app/widgets/Logo'
 import s from './Footer.module.scss'
 import { Button, Flex, Text } from 'stone-kit'
 import { YandexMap } from '@/src/app/widgets/YandexMap'
+import { FormContext } from '@/src/app/providers/formProvider'
+import { useContext } from 'react'
+import { ModalForm } from '../../ModalForm'
 
 interface IFooterProps {
 	className?: string
 }
 
 export const Footer = ({}: IFooterProps) => {
+	const form = useContext(FormContext)
+
 	const infoList = [
 		{
 			title: 'Единый номер',
@@ -28,7 +34,9 @@ export const Footer = ({}: IFooterProps) => {
 	]
 
 	return (
-		<Flex className={s.root} id='contacts'>
+		<Flex
+			className={s.root}
+			id='contacts'>
 			<Flex className={s.logoWrapper}>
 				<Logo
 					variant='white'
@@ -68,10 +76,17 @@ export const Footer = ({}: IFooterProps) => {
 					as='button'
 					variant='blue'
 					width='full'
-					size='large'>
+					size='large'
+					onClick={() => form?.setIsFormModalOpen(true)}>
 					Оставить обращение
 				</Button>
 			</Flex>
+			{form && (
+				<ModalForm
+					isFormOpen={form.isFormModalOpen}
+					setIsFormOpen={form?.setIsFormModalOpen}
+				/>
+			)}
 		</Flex>
 	)
 }

@@ -1,4 +1,3 @@
-
 .modalContent {
 	flex-direction: column;
 	padding: 0 0 40px 0;
@@ -11,11 +10,18 @@
 }
 
 .modalBody {
+	width: 100%;
 	flex-direction: column;
 	gap: 32px;
+
+	& img {
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 .textWrapper {
+	width: 100%;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 0 32px;
