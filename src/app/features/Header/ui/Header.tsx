@@ -35,10 +35,10 @@ export const Header = ({}) => {
 	if (!menuList) return null
 	return (
 		<div className={s.root}>
-			<Logo uk={true} />
+			<Logo uk={true} variant={'white'} />
 			<Flex gap='2'>
 				<Button
-					variant='black'
+					variant='blue'
 					size='small'
 					as='link'
 					href='tel:88007752471'>
@@ -62,10 +62,10 @@ export const Header = ({}) => {
 					variant='gray'
 					size='small'
 					as='button'
-					onClick={() => (
-						!form?.isFormModalOpen && setIsModalOpen((prev) => !prev),
+					onClick={() => {
+						!form?.isFormModalOpen && setIsModalOpen((prev) => !prev)
 						form?.isFormModalOpen && form?.setIsFormModalOpen((prev) => !prev)
-					)}>
+					}}>
 					<NewIcon
 						name={isModalOpen || form?.isFormModalOpen ? 'burgerClose' : 'burger'}
 						color='#141416'

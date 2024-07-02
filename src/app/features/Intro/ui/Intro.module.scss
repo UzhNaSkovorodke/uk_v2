@@ -1,56 +1,44 @@
 .root {
-	position: relative;
-	border-radius: 32px;
-	overflow: hidden;
-	margin: 8px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
-	position: absolute;
-	left: 16px;
-	top: 40px;
-	z-index: 2;
-	font-size: 32px;
-	line-height: 32px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	text-align: left;
-	color: #ffffff;
-}
-
-.slider {
-	display: flex;
-	justify-content: flex-start;
-	overflow: hidden;
-}
-
-.slide {
-	position: relative;
-	flex: 0 0 100vw;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #ffffff;
 }
 
 .text {
-	position: absolute;
-	left: 16px;
-	bottom: 16px;
-	z-index: 2;
-	font-size: 12px;
-	line-height: 16px;
-	font-weight: 500;
-	text-transform: uppercase;
-	color: #ffffff;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 609px;
 }
 
 .image {
-	width: 100%;
-	height: 100%;
-	min-width: 375px;
-	min-height: 553px;
-	max-height: 650px;
-	object-fit: cover;
-}
-
-.range {
-	bottom: 16px;
-	right: 16px;
+  width: 100%;
+  height: 100%;
+  min-width: 375px;
+  min-height: 553px;
+  max-height: 650px;
+  object-fit: cover;
 }

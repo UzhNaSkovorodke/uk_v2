@@ -1,59 +1,45 @@
 .root {
-	flex-direction: column;
-	padding: 60px 16px;
-	gap: 16px;
+  flex-direction: column;
+  padding: 80px 16px;
+  gap: 16px;
 }
 
 .title {
-	margin: 0;
-	align-self: flex-start;
-	font-size: 32px;
-	line-height: 32px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	color: #141416;
+  margin: 0;
+  align-self: flex-start;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #141416;
 }
 
-.servicesList {
-	flex-direction: column;
-	gap: 16px;
-	margin: 16px 0 0 0;
-	width: 100%;
-	padding: 0;
-	list-style: none;
+.cards {
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
 }
 
-.cardItem {
-	width: 100%;
-	padding: 40px 24px;
-	gap: 8px;
-	flex-direction: column;
-	align-items: center;
-	background: #fcfcfd;
-	border: 1px solid #e6e8ec;
-	border-radius: 24px;
+.cardWrapper {
+
+  position: relative;
+  height: 343px;
+  width: 100%;
+
+  img {
+    object-fit: cover;
+    border-radius: 24px;
+  }
 }
 
-.cardTitle {
-	margin: 0;
-	font-size: 24px;
-	line-height: 32px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	text-align: center;
-	color: #141416;
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
 }
 
-.cardDescription {
-	margin: 0;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	text-align: center;
-	color: #777e90;
-}
-
-.cardBtn {
-	margin-top: 24px;
+.btn {
+  position: relative;
+  margin: 0 24px 24px;
 }
