@@ -7,7 +7,6 @@ import { useRef, useState } from 'react'
 import { Swiper as SwiperClass } from 'swiper/types'
 import Image from 'next/image'
 import { ModalNews } from '../../ModalNews'
-import Link from 'next/link'
 
 interface INewsProps {
 	className?: string
@@ -50,7 +49,6 @@ export const News = ({}: INewsProps) => {
 			<Text className={s.title}>Новости</Text>
 			<Swiper
 				className={s.slider}
-				loop
 				wrapperClass={s.sliderWrapper}
 				spaceBetween={8}
 				initialSlide={activeIndex}

@@ -6,6 +6,7 @@ import { Header } from './features/Header'
 import { Footer } from './features/Footer'
 import s from './layout.module.scss'
 import './globals.scss'
+import 'swiper/css';
 
 const ttHovesPro = localFont({
 	src: [

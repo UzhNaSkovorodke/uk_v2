@@ -1,86 +1,97 @@
 'use client'
 
-import {Swiper, SwiperSlide} from 'swiper/react'
-import {useState} from 'react'
-import Image from 'next/image'
-import {Flex, Text} from 'stone-kit'
+import {useRef, useState} from 'react'
+import {RoundButton, Tag, Text} from 'stone-kit'
 import classNames from 'classnames'
-import {RangeCircle} from '@/src/app/widgets/RangeCircle'
-import {Autoplay} from 'swiper/modules'
 import s from './Team.module.scss'
+import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
+import Image from "next/image";
 
 export const Team = () => {
-	const [activeIndex, setActiveIndex] = useState<number>(0)
-	const cx = classNames.bind(s)
+    const [indexSlide, setIndexSlide] = useState<number>(0)
+    const swiperRef = useRef<SwiperRef>(null)
 
-	const teamList = [
-		{
-			name: 'Иванов Иван Иванович',
-			post: 'Генеральный директор',
-			image: '/team1.webp',
-		},
-		{
-			name: 'Тетя Клава',
-			post: 'Уборщик',
-			image: '/team1.webp',
-		},
-		{
-			name: 'Петя',
-			post: 'заправщик',
-			image: '/team1.webp',
-		},
-		{
-			name: 'Вася',
-			post: 'врач',
-			image: '/team1.webp',
-		},
-		{
-			name: 'Маша',
-			post: 'в кашу',
-			image: '/team1.webp',
-		},
-	]
+    const goNext = () => {
+        if (swiperRef.current) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
 
-	return (
-		<div className={s.root}>
-			<Text className={s.title}>Команда</Text>
-			<Swiper
-				slidesPerView={'auto'}
-				//autoplay={{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: false }}
-				modules={[Autoplay]}
-				loop
-				className={s.slider}
-				spaceBetween={10}
-				onRealIndexChange={(swiperCore) => setActiveIndex(swiperCore.realIndex)}>
-				{teamList.map((t, i) => (
-					<SwiperSlide
-						key={i}
-						className={cx(s.slide)}>
-						<div className={'imageWrapper'}
+    const goPrev = () => {
+        if (swiperRef.current) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
 
-						>
-						<Image
-							src={t.image}
-							fill
-							className={cx(s.image, { [s.activeSlide]: i === activeIndex })}
-							alt={`${t.name}`}
-						/>
-						</div>
-					</SwiperSlide>
-				))}
-			</Swiper>
-			<div>
-				<Text className={s.jobTitle}>{teamList[activeIndex]?.post}</Text>
-				<Flex additionalClass={s.nameWrapper}>
-					<Text className={s.nameTitle}>{teamList[activeIndex]?.name}</Text>
-					<RangeCircle
-						activeSlide={activeIndex + 1}
-						variant='dark'
-						additionalClass={s.range}
-					/>
-				</Flex>
-			</div>
-		</div>
-	)
+    const cx = classNames.bind(s)
+
+    const teamList = [
+        {
+            imgTitle: 'Ирина Севалкина ',
+            imgSubtitle: 'Генеральный директор',
+            image: '/team1.webp',
+        },
+        {
+            imgTitle: 'Ирина Севалкина ',
+            imgSubtitle: 'Генеральный директор',
+            image: '/team1.webp',
+        },
+    ]
+
+    return (
+        <div className={s.root}>
+            <Text className={s.title}>Команда</Text>
+
+            <Swiper
+                className={s.slider}
+                ref={swiperRef}
+                slidesPerView={1}
+                navigation onSlideChange={(swiper) => {
+                setIndexSlide(swiper.activeIndex)
+            }}>
+                {teamList.map((e, i) => {
+                    return <SwiperSlide key={i}>
+                        <div className={s.slide}>
+                            <div className={s.slideContent}>
+                                <div className={s.imageWrapper}>
+                                    <Image src={'/team1.webp'} alt={'architecture'} fill/>
+                                </div>
+                                <Text className={s.imgTitle} html={e.imgTitle}/>
+                                <Text className={s.imgSubTitle} html={e.imgSubtitle}/>
+                            </div>
+
+                            <div className={s.navigation}>
+                                <RoundButton
+                                    size='medium'
+                                    iconName='arrowLong'
+                                    deg='90'
+                                    disabled={indexSlide === 0}
+                                    additionalClass={s.navBtn}
+                                    onClick={goPrev}
+                                />
+
+                                <Tag
+                                    variant='shade'
+                                    size='medium'>
+                                    {'1 из 3'}
+                                </Tag>
+
+                                <RoundButton
+                                    disabled={indexSlide === teamList.length - 1}
+                                    size='medium'
+                                    iconName='arrowLong'
+                                    deg='-90'
+                                    additionalClass={s.navBtn}
+                                    onClick={goNext}
+                                />
+                            </div>
+                        </div>
+
+                    </SwiperSlide>
+                })}
+            </Swiper>
+
+        </div>
+    )
 }
 
