@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/mobile Projects, AboutCompany" />
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/mobile Projects, AboutCompany">
+      <change afterPath="$PROJECT_DIR$/src/app/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/widgets/YandexMap/ui/YandexMap.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widgets/YandexMap/ui/YandexMap.module.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/SP-388" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,12 +35,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1719998298" />
+                    <option name="branchName" value="feat/SP-388" />
+                    <option name="lastUsedInstant" value="1720091125" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="feat/SP-388" />
-                    <option name="lastUsedInstant" value="1719930552" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1720089929" />
                   </RecentBranch>
                 </list>
               </option>
@@ -60,6 +67,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat/SP-388",
+    "last_opened_file_path": "C:/Code/uk-stone-v2-front/src/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,6 +86,12 @@
       </map>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Code\uk-stone-v2-front\src\app" />
+      <recent name="C:\Code\uk-stone-v2-front\src\styles" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +102,7 @@
       <updated>1719930511361</updated>
       <workItem from="1719930513096" duration="1896000" />
       <workItem from="1719989958655" duration="4623000" />
+      <workItem from="1720089977475" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
