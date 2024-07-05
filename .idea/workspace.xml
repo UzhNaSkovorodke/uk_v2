@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/mobile Projects, AboutCompany">
-      <change afterPath="$PROJECT_DIR$/src/app/variables.scss" afterDir="false" />
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/tablet News, Services, AboutCompany">
+      <change afterPath="$PROJECT_DIR$/src/app/shared/useClientWidth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/widgets/YandexMap/ui/YandexMap.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widgets/YandexMap/ui/YandexMap.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/News/ui/News.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/News/ui/News.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/News/ui/News.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/News/ui/News.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat/SP-388",
-    "last_opened_file_path": "C:/Code/uk-stone-v2-front/src/app",
+    "last_opened_file_path": "C:/Code/uk-stone-v2-front/src/app/shared",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,6 +90,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Code\uk-stone-v2-front\src\app\shared" />
       <recent name="C:\Code\uk-stone-v2-front\src\app" />
       <recent name="C:\Code\uk-stone-v2-front\src\styles" />
     </key>
@@ -120,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720015183210</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat/tablet Footer, YMap">
+      <option name="closed" value="true" />
+      <created>1720103478348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720103478348</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +150,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat/mobile Projects, AboutCompany" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/mobile Projects, AboutCompany" />
+    <MESSAGE value="feat/tablet Footer, YMap" />
+    <MESSAGE value="feat/tablet News, Services, AboutCompany" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat/tablet News, Services, AboutCompany" />
   </component>
 </project>

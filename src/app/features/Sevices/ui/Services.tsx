@@ -6,12 +6,14 @@ import {ModalForm} from '../../ModalForm'
 import {FormContext} from '@/src/app/providers/formProvider/ui/formProvider'
 import s from './Services.module.scss'
 import Image from 'next/image'
+import {useClientWidth} from "@/src/app/shared/useClientWidth";
 
 export const Services = ({}) => {
     const form = useContext(FormContext)
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
     const {isFormModalOpen, setIsFormModalOpen} = form
     const [activeService, setActiveService] = useState<number>(0)
+    const {isMobile} = useClientWidth()
 
     const servicesList = [
         {
@@ -58,12 +60,13 @@ export const Services = ({}) => {
                                quality={90}
                                className={s.image}
                                alt={'image'}/>
-                        <div className={s.btnWrapper}>
+                        <Flex className={s.cardInf}>
+                            <Text className={s.cardTitle} html={e.title}/>
                             <Button
                                 variant='whiteStroke'
                                 size='large'
                                 as='button'
-                                width='full'
+                                width={isMobile ? 'full' : 'auto'}
                                 additionalClass={s.btn}
                                 onClick={() => {
                                     setIsModalOpen(true)
@@ -71,7 +74,7 @@ export const Services = ({}) => {
                                 }}>
                                 Подробнее
                             </Button>
-                        </div>
+                        </Flex>
                     </div>
                 })}
             </Flex>
