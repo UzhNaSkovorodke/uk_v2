@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/tablet News, Services, AboutCompany">
-      <change afterPath="$PROJECT_DIR$/public/team1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/team2.jpg" afterDir="false" />
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/desktop Intro, Services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/team1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,21 +59,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat/SP-388",
-    "last_opened_file_path": "C:/Code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Code\\uk-stone-v2-front\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/SP-388&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Code\\uk-stone-v2-front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -107,7 +102,8 @@
       <workItem from="1719930513096" duration="1896000" />
       <workItem from="1719989958655" duration="4623000" />
       <workItem from="1720089977475" duration="607000" />
-      <workItem from="1720177860890" duration="6622000" />
+      <workItem from="1720177860890" duration="7877000" />
+      <workItem from="1720439372015" duration="5426000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
@@ -141,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720170131864</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat/tablet Project, Team">
+      <option name="closed" value="true" />
+      <created>1720424392517</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720424392517</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat/desktop Intro, Services">
+      <option name="closed" value="true" />
+      <created>1720448242116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720448242116</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +174,8 @@
     <MESSAGE value="feat/mobile Projects, AboutCompany" />
     <MESSAGE value="feat/tablet Footer, YMap" />
     <MESSAGE value="feat/tablet News, Services, AboutCompany" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/tablet News, Services, AboutCompany" />
+    <MESSAGE value="feat/tablet Project, Team" />
+    <MESSAGE value="feat/desktop Intro, Services" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat/desktop Intro, Services" />
   </component>
 </project>

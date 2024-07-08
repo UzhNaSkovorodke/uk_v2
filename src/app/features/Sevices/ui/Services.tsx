@@ -13,7 +13,7 @@ export const Services = ({}) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
     const {isFormModalOpen, setIsFormModalOpen} = form
     const [activeService, setActiveService] = useState<number>(0)
-    const {isMobile} = useClientWidth()
+    const {isMobile, isDesktop} = useClientWidth()
 
     const servicesList = [
         {
@@ -51,7 +51,26 @@ export const Services = ({}) => {
         <Flex
             className={s.root}
             id='services'>
-            <Text className={s.title}>Наши услуги</Text>
+            <Flex className={s.titleWrapper} ai={'center'}>
+                <Text className={s.title}>Наши услуги</Text>
+
+                {!isMobile && <Button
+                    width='full'
+                    variant='blue'
+                    as='button'
+                    size='small'
+                    additionalClass={`${s.btn} ${s.btn_call}`}
+                    post={
+                        <NewIcon
+                            name='arrowLong'
+                            deg='-90'
+                            color='white'
+                        />
+                    }
+                    onClick={() => form?.setIsFormModalOpen(true)}>
+                    Оставить обращение
+                </Button>}
+            </Flex>
             <Flex className={s.cards}>
                 {servicesList.map((e, i) => {
                     return <div key={i} className={s.cardWrapper}>
@@ -64,7 +83,7 @@ export const Services = ({}) => {
                             <Text className={s.cardTitle} html={e.title}/>
                             <Button
                                 variant='whiteStroke'
-                                size='large'
+                                size={isDesktop ? 'large' : 'large'}
                                 as='button'
                                 width={isMobile ? 'full' : 'auto'}
                                 additionalClass={s.btn}
@@ -78,12 +97,12 @@ export const Services = ({}) => {
                     </div>
                 })}
             </Flex>
-            <Button
+            {isMobile && <Button
                 width='full'
                 variant='blue'
                 as='button'
                 size='large'
-                additionalClass={s.btn}
+                additionalClass={`${s.btn} ${s.btn_call}`}
                 post={
                     <NewIcon
                         name='arrowLong'
@@ -93,7 +112,7 @@ export const Services = ({}) => {
                 }
                 onClick={() => form?.setIsFormModalOpen(true)}>
                 Оставить обращение
-            </Button>
+            </Button>}
             <ModalServices
                 isModalOpen={isModalOpen}
                 setIsModalOpen={setIsModalOpen}

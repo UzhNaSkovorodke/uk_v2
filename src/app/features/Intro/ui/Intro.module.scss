@@ -1,3 +1,5 @@
+@import "@/src/app/variables";
+
 .root {
   position: relative;
   overflow: hidden;
@@ -17,18 +19,6 @@
   color: #ffffff;
 }
 
-.text {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  z-index: 2;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -42,4 +32,20 @@
   min-height: 553px;
   max-height: 650px;
   object-fit: cover;
+}
+
+@media(min-width: $laptop) {
+  .title {
+    font-size: 48px;
+    line-height: 48px;
+    left: 40px;
+    bottom: 40px;
+  }
+}
+
+@media(min-width: $desktop) {
+  .title {
+    font-size: 64px;
+    line-height: 64px;
+  }
 }
