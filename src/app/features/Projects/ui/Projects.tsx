@@ -1,5 +1,5 @@
 'use client'
-import {RoundButton, Tag, Text} from 'stone-kit';
+import {Flex, RoundButton, Tag, Text} from 'stone-kit';
 import {Swiper, SwiperRef, SwiperSlide} from 'swiper/react';
 import s from './Projects.module.scss';
 import Image from "next/image";
@@ -52,19 +52,7 @@ export const Projects = ({}: IProjectsProps) => {
             }}>
                 {projectsList.map((e, i) => {
                     return <SwiperSlide key={i}>
-                        <div className={s.projectLabel}>
-                            <Text className={s.title}>Объекты</Text>
 
-                            <div className={s.featureWrapper}>
-                                <Tag
-                                    key={1}
-                                    additionalClass={s.projectFeature}
-                                    variant='shade'
-                                    size='medium'>
-                                    {'160 000 м2'}
-                                </Tag>
-                            </div>
-                        </div>
 
                         <div className={s.navigation}>
                             <RoundButton
@@ -83,18 +71,43 @@ export const Projects = ({}: IProjectsProps) => {
                             </Tag>
 
                             <RoundButton
-                                disabled={indexSlide === projectsList.length -1}
+                                disabled={indexSlide === projectsList.length - 1}
                                 size='medium'
                                 iconName='arrowLong'
                                 deg='-90'
                                 additionalClass={s.navBtn}
                                 onClick={goNext}
                             />
-
                         </div>
 
                         <div className={s.projectWrapper}>
                             <Image quality={100} className={s.projectImage} fill src={e.image} alt={`${e.image}`}/>
+
+                            <div className={s.projectLabel}>
+                                <Text className={s.title}>Объекты</Text>
+
+                                <Flex jc={'between'}  ai={'center'} className={s.featureWrapper}>
+                                    <div className={s.features}>
+                                        <Tag
+                                            key={1}
+                                            variant='shade'
+                                            size='medium'>
+                                            {'160 000 м2'}
+                                        </Tag>
+                                    </div>
+
+                                    <RoundButton
+                                        disabled={indexSlide === projectsList.length - 1}
+                                        size='medium'
+                                        iconName='arrowLong'
+                                        deg='-90'
+                                        onClick={goNext}
+                                    />
+                                </Flex>
+
+                            </div>
+
+
                         </div>
                     </SwiperSlide>
                 })}

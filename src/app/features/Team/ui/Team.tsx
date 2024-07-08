@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import s from './Team.module.scss'
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import Image from "next/image";
+import {EffectFade} from "swiper/modules";
 
 export const Team = () => {
     const [indexSlide, setIndexSlide] = useState<number>(0)
@@ -29,12 +30,12 @@ export const Team = () => {
         {
             imgTitle: 'Ирина Севалкина ',
             imgSubtitle: 'Генеральный директор',
-            image: '/team1.webp',
+            image: '/team1.jpg',
         },
         {
-            imgTitle: 'Ирина Севалкина ',
+            imgTitle: 'Не Севалкина ',
             imgSubtitle: 'Генеральный директор',
-            image: '/team1.webp',
+            image: '/team2.jpg',
         },
     ]
 
@@ -42,9 +43,37 @@ export const Team = () => {
         <div className={s.root}>
             <Text className={s.title}>Команда</Text>
 
+            <div className={s.navigation}>
+                <RoundButton
+                    size='medium'
+                    iconName='arrowLong'
+                    deg='90'
+                    disabled={indexSlide === 0}
+                    additionalClass={s.navBtn}
+                    onClick={goPrev}
+                />
+
+                <Tag
+                    variant='shade'
+                    size='medium'>
+                    {'1 из 3'}
+                </Tag>
+
+                <RoundButton
+                    disabled={indexSlide === teamList.length - 1}
+                    size='medium'
+                    iconName='arrowLong'
+                    deg='-90'
+                    additionalClass={s.navBtn}
+                    onClick={goNext}
+                />
+            </div>
+
             <Swiper
                 className={s.slider}
                 ref={swiperRef}
+                // effect={'fade'}
+                // modules={[EffectFade]}
                 slidesPerView={1}
                 navigation onSlideChange={(swiper) => {
                 setIndexSlide(swiper.activeIndex)
@@ -54,43 +83,16 @@ export const Team = () => {
                         <div className={s.slide}>
                             <div className={s.slideContent}>
                                 <div className={s.imageWrapper}>
-                                    <Image src={'/team1.webp'} alt={'architecture'} fill/>
+                                    <Image src={e.image} alt={'architecture'} fill/>
                                 </div>
-                                <Text className={s.imgTitle} html={e.imgTitle}/>
                                 <Text className={s.imgSubTitle} html={e.imgSubtitle}/>
-                            </div>
-
-                            <div className={s.navigation}>
-                                <RoundButton
-                                    size='medium'
-                                    iconName='arrowLong'
-                                    deg='90'
-                                    disabled={indexSlide === 0}
-                                    additionalClass={s.navBtn}
-                                    onClick={goPrev}
-                                />
-
-                                <Tag
-                                    variant='shade'
-                                    size='medium'>
-                                    {'1 из 3'}
-                                </Tag>
-
-                                <RoundButton
-                                    disabled={indexSlide === teamList.length - 1}
-                                    size='medium'
-                                    iconName='arrowLong'
-                                    deg='-90'
-                                    additionalClass={s.navBtn}
-                                    onClick={goNext}
-                                />
+                                <Text className={s.imgTitle} html={e.imgTitle}/>
                             </div>
                         </div>
 
                     </SwiperSlide>
                 })}
             </Swiper>
-
         </div>
     )
 }

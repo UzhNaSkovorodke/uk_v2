@@ -1,12 +1,14 @@
+@import "@/src/app/variables";
+
+
 .root {
   padding: 40px 0 0 0;
   position: relative;
 }
 
-.projectLabel{
-  position: absolute;
-  top: 40px;
-  left: 16px;
+.projectLabel {
+  padding: 40px 16px 0;
+  position: relative;
   z-index: 2;
 }
 
@@ -25,17 +27,21 @@
   position: relative;
 }
 
-.projectImage{
-	object-fit: cover;
+.projectImage {
+  object-fit: cover;
 }
 
-.featureWrapper{
+.features {
   gap: 4px;
-  margin-top: 24px;
+  width: 100%;
   display: flex;
 }
 
-.navigation{
+.featureWrapper {
+  margin-top: 24px;
+}
+
+.navigation {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -48,7 +54,34 @@
 .navBtn {
   margin-left: 16px;
   margin-right: 16px;
-  left: 4px;
-  bottom: 4px;
   z-index: 3;
+}
+
+@media(min-width: $laptop) {
+
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .projectLabel {
+    padding: 40px 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featureWrapper {
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .navigation {
+    bottom: 40px;
+  }
+
+  .navBtn {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
