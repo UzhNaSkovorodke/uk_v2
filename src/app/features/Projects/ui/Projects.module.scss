@@ -1,7 +1,6 @@
 @import "@/src/app/variables";
 
 .root {
-  padding: 40px 0 0 0;
   position: relative;
 }
 
@@ -82,5 +81,22 @@
   .navBtn {
     margin-left: 40px;
     margin-right: 40px;
+  }
+
+  .projectWrapper {
+    height: 600px;
+  }
+}
+
+@media(min-width: $desktop) {
+  .tag{
+  font-size: 16px;
+  }
+
+  .projectWrapper {
+    height: 768px;
+  }
+  .title {
+    line-height: 48px;
   }
 }

@@ -1,12 +1,16 @@
+'use client'
 import { Flex, Text } from 'stone-kit'
 import s from './AboutCompany.module.scss'
 import Image from 'next/image'
+import {useClientWidth} from "@/src/app/shared/useClientWidth";
 
 interface IAboutCompanyProps {
 	className?: string
 }
 
 export const AboutCompany = ({}: IAboutCompanyProps) => {
+	const {isMobile} = useClientWidth()
+
 	const aboutList = [
 		{
 			title: 'Работа',
@@ -49,8 +53,8 @@ export const AboutCompany = ({}: IAboutCompanyProps) => {
 							key={i}>
 							<Flex className={s.aboutTitleWrapper}>
 								<Image
-									width={24}
-									height={24}
+									width={isMobile ? 24 : 32}
+									height={isMobile ? 24 : 32}
 									src={a.icon}
 									alt={a.title}
 								/>

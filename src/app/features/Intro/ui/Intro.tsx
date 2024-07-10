@@ -2,8 +2,17 @@
 import {Text} from 'stone-kit'
 import s from './Intro.module.scss'
 import Image from 'next/image'
+import {useClientWidth} from "@/src/app/shared/useClientWidth";
 
 export const Intro = () => {
+    const {isTablet, isDesktop} = useClientWidth()
+
+    const getPict = ({isTablet, isDesktop}: { isTablet: boolean, isDesktop: boolean }) => {
+        if (isTablet) return '/introTestM.png'
+        else if (isDesktop) return '/introTestL.png'
+        return '/introTestM.png'
+    }
+
     return (
         <div className={s.root}>
             <Text
@@ -12,9 +21,9 @@ export const Intro = () => {
             />
             <div className={s.imageWrapper}>
                 <Image
-                    src={'/IntroTest.png'}
+                    src={getPict({isTablet, isDesktop})}
                     fill={true}
-                    quality={90}
+                    quality={100}
                     className={s.image}
                     alt={'image'}
                 />

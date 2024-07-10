@@ -17,7 +17,9 @@ export const Services = ({}) => {
 
     const servicesList = [
         {
-            title: 'Бытовые услуги',
+            title: 'Управление и эксплуатация коммерческой недвижимости',
+            titleColor: '',
+
             description: 'Поддерживаем дома и придомовые территории',
             text: 'Управляющая офисная компания «STONE» — это ваш надежный партнер в создании комфортных и эффективных условий работы. Мы предлагаем полный спектр услуг по управлению и обслуживанию офисных помещений, включая техническое обслуживание, клининг, охрану и обеспечение комфорта сотрудников. Наша команда профессионалов обеспечивает высокий уровень сервиса и оперативное решение любых возникающих вопросов. С «STONE» вы можете быть уверены, что ваш офис будет работать как часы, позволяя вам сосредоточиться на развитии бизнеса. Мы берем на себя заботы о вашем рабочем пространстве, предоставляя комплексные решения для улучшения его функциональности и эстетики. Доверяйте экспертам — выбирайте «STONE» и наслаждайтесь безупречным сервисом.',
             btnText: 'Подробнее',
@@ -25,19 +27,25 @@ export const Services = ({}) => {
             pageImage: '/servicePage.webp',
         },
         {
-            title: 'Лакшери услуги',
+            title: 'Технический аудит систем и оборудования',
+            titleColor: '#FFFFFF',
+
             description: 'Поддерживаем дома и не только',
             btnText: 'Подробнее',
             text: 'Лухари текст',
             image: '/card2Test.png',
+            isGradient: true,
             pageImage: '/servicePage.webp',
         },
         {
-            title: 'Пятерочка',
+            title: 'Дополнительные услуги',
+            titleColor: '#FFFFFF',
+
             description: 'Поддерживаем',
             btnText: 'Подробнее',
             text: 'Кушанье',
             image: '/card3Test.png',
+            isGradient: true,
             pageImage: '/servicePage.webp',
         },
     ]
@@ -58,7 +66,7 @@ export const Services = ({}) => {
                     width='full'
                     variant='blue'
                     as='button'
-                    size='small'
+                    size={isDesktop ? 'large' : 'medium'}
                     additionalClass={`${s.btn} ${s.btn_call}`}
                     post={
                         <NewIcon
@@ -73,17 +81,19 @@ export const Services = ({}) => {
             </Flex>
             <Flex className={s.cards}>
                 {servicesList.map((e, i) => {
-                    return <div key={i} className={s.cardWrapper}>
+                    return <div key={i} className={s.cardWrapper} style={e.isGradient ?  {
+                        background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%)'
+                    } : {}}>
                         <Image fill={true}
                                src={e.image}
                                quality={90}
                                className={s.image}
                                alt={'image'}/>
                         <Flex className={s.cardInf}>
-                            <Text className={s.cardTitle} html={e.title}/>
+                            <Text className={s.cardTitle} style={{color: e.titleColor}} html={e.title}/>
                             <Button
                                 variant='whiteStroke'
-                                size={isDesktop ? 'large' : 'large'}
+                                size={'large'}
                                 as='button'
                                 width={isMobile ? 'full' : 'auto'}
                                 additionalClass={s.btn}

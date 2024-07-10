@@ -59,13 +59,21 @@
 
 @media(min-width: $laptop) {
   .root {
-  flex-direction: row;
+    flex-direction: row;
     padding: 120px 40px;
   }
   .title {
     width: 50%;
   }
-  .aboutList{
+  .aboutList {
     width: 50%;
+  }
+}
+@media(min-width: $desktop) {
+  .title {
+    width: 30%;
+  }
+  .aboutList {
+    width: 70%;
   }
 }

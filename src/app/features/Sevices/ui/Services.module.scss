@@ -2,7 +2,7 @@
 
 .root {
   flex-direction: column;
-  padding: 40px 16px;
+  padding: 80px 16px;
 }
 
 .titleWrapper {
@@ -64,8 +64,12 @@
 }
 
 @media(min-width: $laptop) {
+  .cardInf {
+    padding: 32px;
+  }
+
   .root {
-    padding: 80px 40px 40px;
+    padding: 80px 40px;
   }
 
   .titleWrapper {
@@ -74,6 +78,7 @@
 
   .title {
     font-size: 40px;
+    line-height: 40px;
   }
   .cardTitle {
     font-size: 24px;
@@ -83,23 +88,40 @@
     text-align: left;
   }
 
-  .btn_call{
+  .btn_call {
     margin-top: 0;
     max-width: 205px;
   }
 }
 
 @media(min-width: $desktop) {
+  .root {
+    padding: 120px 40px 80px;
+  }
+
+  .title {
+    line-height: 48px;
+  }
+
   .cards {
     flex-direction: row;
   }
-  .cardWrapper{
+
+  .cardWrapper {
     height: 443px;
+    border-radius: 32px;
+
+    img {
+      z-index: -1;
+      border-radius: 32px;
+    }
   }
-  .btn{
+
+  .btn {
     width: 135px;
   }
-  .btn_call{
+
+  .btn_call {
     width: 100%;
     margin-top: 0;
     max-width: 240px;

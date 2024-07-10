@@ -4,6 +4,7 @@ import {Swiper, SwiperRef, SwiperSlide} from 'swiper/react';
 import s from './Projects.module.scss';
 import Image from "next/image";
 import {useRef, useState} from "react";
+import {useClientWidth} from "@/src/app/shared/useClientWidth";
 
 interface IProjectsProps {
 }
@@ -11,6 +12,9 @@ interface IProjectsProps {
 export const Projects = ({}: IProjectsProps) => {
     const swiperRef = useRef<SwiperRef>(null);
     const [indexSlide, setIndexSlide] = useState<number>(0)
+
+    const {isDesktop} = useClientWidth()
+
     const goNext = () => {
         if (swiperRef.current) {
             swiperRef.current.swiper.slideNext();
@@ -26,17 +30,17 @@ export const Projects = ({}: IProjectsProps) => {
     const projectsList = [
         {
             name: 'Stone Towers',
-            image: '/project1Test.jpg',
+            image: '/projectTest1.jpg',
             features: ['160 000 кв.м', '5 этаж', '3 комнаты'],
         },
         {
             name: 'Stone Coin',
-            image: '/project2Test.webp',
+            image: '/projectTest1.jpg',
             features: ['1 000 000 кв.м', '1 этаж', '2 комнаты'],
         },
         {
             name: 'Stone Savelovskaya',
-            image: '/project1Test.jpg',
+            image: '/projectTest1.jpg',
             features: ['310 100 кв.м', '10 этаж'],
         },
     ]
@@ -52,66 +56,64 @@ export const Projects = ({}: IProjectsProps) => {
             }}>
                 {projectsList.map((e, i) => {
                     return <SwiperSlide key={i}>
-
-
-                        <div className={s.navigation}>
-                            <RoundButton
-                                size='medium'
-                                iconName='arrowLong'
-                                deg='90'
-                                disabled={indexSlide === 0}
-                                additionalClass={s.navBtn}
-                                onClick={goPrev}
-                            />
-
-                            <Tag
-                                variant='shade'
-                                size='medium'>
-                                {'STONE Towers'}
-                            </Tag>
-
-                            <RoundButton
-                                disabled={indexSlide === projectsList.length - 1}
-                                size='medium'
-                                iconName='arrowLong'
-                                deg='-90'
-                                additionalClass={s.navBtn}
-                                onClick={goNext}
-                            />
-                        </div>
-
                         <div className={s.projectWrapper}>
                             <Image quality={100} className={s.projectImage} fill src={e.image} alt={`${e.image}`}/>
 
                             <div className={s.projectLabel}>
                                 <Text className={s.title}>Объекты</Text>
 
-                                <Flex jc={'between'}  ai={'center'} className={s.featureWrapper}>
+                                <Flex jc={'between'} ai={'center'} className={s.featureWrapper}>
                                     <div className={s.features}>
                                         <Tag
+                                            additionalClass={s.tag}
+                                            size={isDesktop ? 'large' : 'medium'}
                                             key={1}
-                                            variant='shade'
-                                            size='medium'>
-                                            {'160 000 м2'}
+                                            variant='shade'>
+                                            {'Готовность 2024'}
                                         </Tag>
                                     </div>
 
                                     <RoundButton
-                                        disabled={indexSlide === projectsList.length - 1}
-                                        size='medium'
-                                        iconName='arrowLong'
+                                        size={isDesktop ? 'large' : 'medium'}
+                                        iconName='plus'
                                         deg='-90'
-                                        onClick={goNext}
+                                        onClick={() => {
+                                        }}
                                     />
                                 </Flex>
 
                             </div>
-
-
                         </div>
                     </SwiperSlide>
                 })}
             </Swiper>
+
+            <div className={s.navigation}>
+                <RoundButton
+                    size={isDesktop ? 'large' : 'medium'}
+                    iconName='arrowLong'
+                    deg='90'
+                    disabled={indexSlide === 0}
+                    additionalClass={s.navBtn}
+                    onClick={goPrev}
+                />
+
+                <Tag
+                    additionalClass={s.tag}
+                    variant='shade'
+                    size={isDesktop ? 'large' : 'medium'}>
+                    {projectsList[indexSlide].name}
+                </Tag>
+
+                <RoundButton
+                    disabled={indexSlide === projectsList.length - 1}
+                    size={isDesktop ? 'large' : 'medium'}
+                    iconName='arrowLong'
+                    deg='-90'
+                    additionalClass={s.navBtn}
+                    onClick={goNext}
+                />
+            </div>
         </div>
     )
 }

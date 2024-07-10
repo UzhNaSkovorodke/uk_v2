@@ -6,8 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/desktop Intro, Services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/IntroTest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/IntroTest.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/project1Test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/project2Test.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +118,12 @@
       <workItem from="1720089977475" duration="607000" />
       <workItem from="1720177860890" duration="7877000" />
       <workItem from="1720439372015" duration="5426000" />
+      <workItem from="1720449042079" duration="605000" />
+      <workItem from="1720450840233" duration="37000" />
+      <workItem from="1720451627131" duration="751000" />
+      <workItem from="1720509862983" duration="625000" />
+      <workItem from="1720515844221" duration="13181000" />
+      <workItem from="1720536194584" duration="3096000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
