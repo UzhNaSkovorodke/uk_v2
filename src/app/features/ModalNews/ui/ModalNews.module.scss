@@ -1,47 +1,105 @@
+@import "@/src/app/variables";
+
+
 .modalContent {
-	flex-direction: column;
-	padding: 0 0 40px 0;
+  flex-direction: column;
+  padding: 0 0 40px 0;
+  height: 100%;
 }
 
 .modalHeader {
-	width: 100%;
-	padding: 12px 16px;
-	justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  justify-content: space-between;
 }
 
 .modalBody {
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 32px 0;
-	gap: 32px;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0;
+}
 
-	& img {
-		width: 100%;
-		object-fit: cover;
-	}
+.img {
+  position: relative;
+  width: 100%;
+  min-height: 183px;
+  height: 183px;
+  img {
+    object-fit: cover;
+  }
 }
 
 .textTitle {
-	padding: 0 32px;
-	font-size: 32px;
-	line-height: 32px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	color: #141416;
+  padding: 32px 32px 24px;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #141416;
 }
 
 .textDate {
-	padding: 0 32px;
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: 500;
-	color: #b1b5c3;
+  padding: 0 32px 24px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #b1b5c3;
+}
+
+.subTitle {
+  padding: 0 32px 40px;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1%;
 }
 
 .textValue {
-	padding: 0 32px;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #141416;
+  padding: 0 32px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #141416;
+}
+
+@media(min-width: $laptop) {
+  .modalHeader {
+    display: none;
+  }
+
+  .modalContent {
+    padding: 0;
+  }
+
+  .textTitle {
+    padding: 32px 40px 24px;
+  }
+
+  .textDate {
+    padding: 0 40px 24px;
+  }
+
+  .modalBody {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .textWrap {
+    width: 50%;
+  }
+  .img {
+    order: 2;
+    min-height: unset;
+    width: 50%;
+    height: 100%;
+  }
+
+  .close {
+    display: flex;
+    right: 40px;
+    top: 32px;
+    min-width: 52px;
+    position: absolute;
+  }
 }

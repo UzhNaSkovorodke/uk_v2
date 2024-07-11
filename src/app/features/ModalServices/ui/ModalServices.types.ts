@@ -7,6 +7,5 @@ export interface IModalServicesProps {
 		text: string
 		btnText: string
 		image: string
-		pageImage: string
 	}
 }

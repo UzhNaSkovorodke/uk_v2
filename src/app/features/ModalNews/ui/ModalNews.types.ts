@@ -6,6 +6,7 @@ export interface IModalNewsProps {
 		date: string
 		image: string
 		pageImage: string
+		subTitle: string
 		text: string
 	}
 }
