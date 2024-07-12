@@ -2,7 +2,7 @@
 import { Flex, Text } from 'stone-kit'
 import s from './AboutCompany.module.scss'
 import Image from 'next/image'
-import {useClientWidth} from "@/src/app/shared/useClientWidth";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 interface IAboutCompanyProps {
 	className?: string
@@ -16,7 +16,7 @@ export const AboutCompany = ({}: IAboutCompanyProps) => {
 			title: 'Работа',
 			icon: '/work.svg',
 			description:
-				'Мы оказываем профессиональные услуги по эксплуатации и техническому обслуживанию объектов коммерческой недвижимости',
+				'Управляющая компания STONE Office оказывает профессиональные услуги по эксплуатации и техническому обслуживанию объектов коммерческой недвижимости. Мы стремимся к долгосрочным партнерским отношениям и гарантируем высокое качество предоставляемых услуг',
 		},
 		{
 			title: 'Опыт',
@@ -34,7 +34,7 @@ export const AboutCompany = ({}: IAboutCompanyProps) => {
 			title: 'Цель',
 			icon: '/target.svg',
 			description:
-				'Наша цель – обеспечить клиентам максимальную удовлетворенность от владения объектом коммерческой недвижимости',
+				'Обеспечить клиентам максимально комфортное владение объектом коммерческой недвижимости',
 		},
 	]
 

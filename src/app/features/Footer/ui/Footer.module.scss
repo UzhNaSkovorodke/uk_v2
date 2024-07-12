@@ -8,7 +8,7 @@
 
 .topHeader {
   flex-direction: column;
-  gap: 40px;
+  gap: 64px;
   width: 100%;
   padding: 32px 16px 64px;
 }
@@ -19,7 +19,7 @@
 
 .infoList {
   width: 100%;
-  padding: 0 32px;
+  padding: 0 16px;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 34px;
@@ -54,6 +54,7 @@
 }
 
 .infoText {
+  white-space: pre-wrap;
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
@@ -70,12 +71,21 @@
 
 @media(min-width: $laptop) {
   .root {
-
+  }
+  .btnWrapper {
+    flex-direction: row;
+    a{
+      min-width: 230px;
+    }
+    button{
+      min-width: 230px;
+    }
   }
 
   .topHeader {
     flex-direction: row;
-    padding: 80px 40px 64px;
+    gap: 0;
+    padding: 80px 40px 120px;
   }
 
   .infoList {
@@ -83,20 +93,29 @@
     flex-wrap: wrap;
     margin-bottom: 48px;
   }
-
+  .infoText {
+    white-space: unset;
+    }
   .infoCard {
     width: 50%;
 
 
     &:first-child {
-      padding-top: 32px;
+      order: 0
     }
 
     &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
       border: none;
+      padding-top: 0;
+      order: 1;
     }
 
     &:last-child {
+      order: 3;
       padding-bottom: 0;
     }
   }

@@ -4,7 +4,7 @@ import {Swiper, SwiperRef, SwiperSlide} from 'swiper/react';
 import s from './Projects.module.scss';
 import Image from "next/image";
 import {useRef, useState} from "react";
-import {useClientWidth} from "@/src/app/shared/useClientWidth";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 interface IProjectsProps {
 }
@@ -30,17 +30,17 @@ export const Projects = ({}: IProjectsProps) => {
     const projectsList = [
         {
             name: 'Stone Towers',
-            image: '/projectTest1.jpg',
+            image: '/projectTest1.png',
             features: ['160 000 кв.м', '5 этаж', '3 комнаты'],
         },
         {
             name: 'Stone Coin',
-            image: '/projectTest1.jpg',
+            image: '/projectTest1.png',
             features: ['1 000 000 кв.м', '1 этаж', '2 комнаты'],
         },
         {
             name: 'Stone Savelovskaya',
-            image: '/projectTest1.jpg',
+            image: '/projectTest1.png',
             features: ['310 100 кв.м', '10 этаж'],
         },
     ]
@@ -61,27 +61,16 @@ export const Projects = ({}: IProjectsProps) => {
 
                             <div className={s.projectLabel}>
                                 <Text className={s.title}>Объекты</Text>
-
                                 <Flex jc={'between'} ai={'center'} className={s.featureWrapper}>
                                     <div className={s.features}>
                                         <Tag
-                                            additionalClass={s.tag}
                                             size={isDesktop ? 'large' : 'medium'}
                                             key={1}
                                             variant='shade'>
                                             {'Готовность 2024'}
                                         </Tag>
                                     </div>
-
-                                    <RoundButton
-                                        size={isDesktop ? 'large' : 'medium'}
-                                        iconName='plus'
-                                        deg='-90'
-                                        onClick={() => {
-                                        }}
-                                    />
                                 </Flex>
-
                             </div>
                         </div>
                     </SwiperSlide>
@@ -99,7 +88,7 @@ export const Projects = ({}: IProjectsProps) => {
                 />
 
                 <Tag
-                    additionalClass={s.tag}
+                    additionalClass={s.tagProj}
                     variant='shade'
                     size={isDesktop ? 'large' : 'medium'}>
                     {projectsList[indexSlide].name}

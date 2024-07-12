@@ -6,7 +6,7 @@ import {useRef, useState} from 'react'
 import {Swiper as SwiperClass} from 'swiper/types'
 import Image from 'next/image'
 import {ModalNews} from '../../ModalNews'
-import {useClientWidth} from "@/src/app/shared/useClientWidth";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 interface INewsProps {
     className?: string

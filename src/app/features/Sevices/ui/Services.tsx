@@ -6,7 +6,7 @@ import {ModalForm} from '../../ModalForm'
 import {FormContext} from '@/src/app/providers/formProvider/ui/formProvider'
 import s from './Services.module.scss'
 import Image from 'next/image'
-import {useClientWidth} from "@/src/app/shared/useClientWidth";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 export const Services = ({}) => {
     const form = useContext(FormContext)
@@ -17,16 +17,17 @@ export const Services = ({}) => {
 
     const servicesList = [
         {
-            title: 'Управление и эксплуатация коммерческой недвижимости',
+            title: 'Управление и эксплуатация \n коммерческой недвижимости',
             titleColor: '',
 
             description: 'Поддерживаем дома и придомовые территории',
             text: 'Управляющая офисная компания «STONE» — это ваш надежный партнер в создании комфортных и эффективных условий работы. Мы предлагаем полный спектр услуг по управлению и обслуживанию офисных помещений, включая техническое обслуживание, клининг, охрану и обеспечение комфорта сотрудников. Наша команда профессионалов обеспечивает высокий уровень сервиса и оперативное решение любых возникающих вопросов. С «STONE» вы можете быть уверены, что ваш офис будет работать как часы, позволяя вам сосредоточиться на развитии бизнеса. Мы берем на себя заботы о вашем рабочем пространстве, предоставляя комплексные решения для улучшения его функциональности и эстетики. Доверяйте экспертам — выбирайте «STONE» и наслаждайтесь безупречным сервисом.',
             btnText: 'Подробнее',
             image: '/card1Test.png',
+            pageImage: '/servicePage.webp',
         },
         {
-            title: 'Технический аудит систем и оборудования',
+            title: 'Технический аудит систем \n и оборудования',
             titleColor: '#FFFFFF',
 
             description: 'Поддерживаем дома и не только',
@@ -34,6 +35,7 @@ export const Services = ({}) => {
             text: 'Лухари текст',
             image: '/card2Test.png',
             isGradient: true,
+            pageImage: '/servicePage.webp',
         },
         {
             title: 'Дополнительные услуги',
@@ -44,6 +46,7 @@ export const Services = ({}) => {
             text: 'Кушанье',
             image: '/card3Test.png',
             isGradient: true,
+            pageImage: '/servicePage.webp',
         },
     ]
 

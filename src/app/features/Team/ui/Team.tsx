@@ -2,15 +2,15 @@
 
 import {useRef, useState} from 'react'
 import {RoundButton, Tag, Text} from 'stone-kit'
-import classNames from 'classnames'
 import s from './Team.module.scss'
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import Image from "next/image";
-import {EffectFade} from "swiper/modules";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 export const Team = () => {
     const [indexSlide, setIndexSlide] = useState<number>(0)
     const swiperRef = useRef<SwiperRef>(null)
+    const {isDesktop} = useClientWidth()
 
     const goNext = () => {
         if (swiperRef.current) {
@@ -24,7 +24,6 @@ export const Team = () => {
         }
     };
 
-    const cx = classNames.bind(s)
 
     const teamList = [
         {
@@ -43,37 +42,37 @@ export const Team = () => {
         <div className={s.root}>
             <Text className={s.title}>Команда</Text>
 
-            <div className={s.navigation}>
-                <RoundButton
-                    size='medium'
-                    iconName='arrowLong'
-                    deg='90'
-                    disabled={indexSlide === 0}
-                    additionalClass={s.navBtn}
-                    onClick={goPrev}
-                />
+            <div className={s.navigationWrapper}>
+                <div className={s.navigation}>
+                    <RoundButton
+                        size={isDesktop ? 'large' : 'medium'}
+                        iconName='arrowLong'
+                        deg='90'
+                        disabled={indexSlide === 0}
+                        additionalClass={s.navBtn}
+                        onClick={goPrev}
+                    />
 
-                <Tag
-                    variant='shade'
-                    size='medium'>
-                    {'1 из 3'}
-                </Tag>
+                    <Tag style={{'backgroundColor': '#141416'}}
+                         variant='shade'
+                         size={isDesktop ? 'large' : 'medium'}>
+                        {`${indexSlide + 1} из ${teamList.length}`}
+                    </Tag>
 
-                <RoundButton
-                    disabled={indexSlide === teamList.length - 1}
-                    size='medium'
-                    iconName='arrowLong'
-                    deg='-90'
-                    additionalClass={s.navBtn}
-                    onClick={goNext}
-                />
+                    <RoundButton
+                        disabled={indexSlide === teamList.length - 1}
+                        size={isDesktop ? 'large' : 'medium'}
+                        iconName='arrowLong'
+                        deg='-90'
+                        additionalClass={s.navBtn}
+                        onClick={goNext}
+                    />
+                </div>
             </div>
 
             <Swiper
                 className={s.slider}
                 ref={swiperRef}
-                // effect={'fade'}
-                // modules={[EffectFade]}
                 slidesPerView={1}
                 navigation onSlideChange={(swiper) => {
                 setIndexSlide(swiper.activeIndex)

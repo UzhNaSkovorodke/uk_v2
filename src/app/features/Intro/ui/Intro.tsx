@@ -2,7 +2,7 @@
 import {Text} from 'stone-kit'
 import s from './Intro.module.scss'
 import Image from 'next/image'
-import {useClientWidth} from "@/src/app/shared/useClientWidth";
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 export const Intro = () => {
     const {isTablet, isDesktop} = useClientWidth()

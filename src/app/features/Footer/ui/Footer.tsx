@@ -5,7 +5,9 @@ import {Button, Flex, Text} from 'stone-kit'
 import {YandexMap} from '@/src/app/widgets/YandexMap'
 import {FormContext} from '@/src/app/providers/formProvider'
 import {useContext} from 'react'
+import Image from 'next/image'
 import {ModalForm} from '../../ModalForm'
+import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 interface IFooterProps {
     className?: string
@@ -13,6 +15,7 @@ interface IFooterProps {
 
 export const Footer = ({}: IFooterProps) => {
     const form = useContext(FormContext)
+    const {isMobile} = useClientWidth()
 
     const infoList = [
         {
@@ -25,7 +28,7 @@ export const Footer = ({}: IFooterProps) => {
         },
         {
             title: 'Адрес',
-            text: 'Москва, ул. Пушкина, д 52',
+            text: '105066, г. Москва,\nБумажный проезд, д. 19',
         },
         {
             title: 'Время работы',
@@ -42,6 +45,7 @@ export const Footer = ({}: IFooterProps) => {
                     <Logo
                         variant='white'
                         uk
+                        between={isMobile}
                     />
                 </Flex>
 
@@ -51,7 +55,9 @@ export const Footer = ({}: IFooterProps) => {
                         href='https://hh.ru'
                         variant='shade'
                         width='full'
-                        size='large'>
+                        size='large'
+                        post={<Image src={'/hh.png'} width={24} height={24} alt={'image'}/>}
+                    >
                         Смотреть вакансии
                     </Button>
                     <Button
@@ -77,7 +83,7 @@ export const Footer = ({}: IFooterProps) => {
                             />
                             <Text
                                 className={s.infoText}
-                                html={`${item.text}`}
+                                html={item.text}
                             />
                         </Flex>
                     )

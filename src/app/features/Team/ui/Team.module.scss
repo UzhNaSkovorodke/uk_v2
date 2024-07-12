@@ -7,7 +7,6 @@
 }
 
 .title {
-  order: 0;
   margin: 0 0 48px;
   font-size: 32px;
   line-height: 40px;
@@ -19,7 +18,7 @@
 }
 
 .slider {
-  order: 1;
+  padding-left: 8px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -38,9 +37,11 @@
   flex-direction: column;
 }
 
-.navigation {
+.navigationWrapper {
   order: 2;
-  width: 100%;
+}
+
+.navigation {
   display: flex;
   justify-content: space-between;
 }
@@ -66,6 +67,7 @@
 }
 
 .imgSubTitle {
+  padding-left: 2px;
   margin-bottom: 4px;
   font-size: 12px;
   font-weight: 400;
@@ -75,17 +77,15 @@
 
 @media(min-width: $laptop) {
   .root {
+    grid-template-columns: repeat(2, 50%);
     flex-direction: row;
     padding: 80px 40px 40px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .navigation {
-    order: 2;
   }
 
   .slider {
-    order: 1
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
   }
 
 
@@ -119,10 +119,40 @@
     line-height: 40px;
   }
 
+  .navigationWrapper {
+    position: relative;
+  }
+
   .navigation {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     gap: 16px;
+  }
+
+  @media(min-width: $desktop) {
+    .root {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .title {
+      line-height: 48px;
+    }
+
+    .navigationWrapper {
+      width: 100%;
+      background: greenyellow;
+    }
+
+    .imageWrapper {
+      margin-bottom: 120px;
+    }
+
+    .imgTitle {
+      font-size: 48px;
+      line-height: 48px;
+    }
   }
 }
