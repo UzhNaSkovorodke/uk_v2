@@ -58,7 +58,7 @@
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: #ffffff;
 }
 
@@ -74,11 +74,16 @@
   }
   .btnWrapper {
     flex-direction: row;
-    a{
+    justify-content: flex-end;
+
+    a {
       min-width: 230px;
+      max-width: 236px;
     }
-    button{
+
+    button {
       min-width: 230px;
+      max-width: 236px;
     }
   }
 
@@ -95,10 +100,9 @@
   }
   .infoText {
     white-space: unset;
-    }
+  }
   .infoCard {
     width: 50%;
-
 
     &:first-child {
       order: 0
@@ -119,4 +123,34 @@
       padding-bottom: 0;
     }
   }
+}
+
+@media (min-width: $desktop) {
+  .topHeader {
+    padding-bottom: 200px;
+  }
+
+  .infoList {
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+
+  }
+  .infoText {
+    white-space: pre-wrap;
+  }
+  .infoCard {
+    padding-bottom: 0;
+
+    &:nth-child(2) {
+      order: 1;
+      border: none;
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-top: 0;
+      border: none;
+    }
+  }
+
 }

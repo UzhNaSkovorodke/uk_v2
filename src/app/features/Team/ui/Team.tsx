@@ -54,8 +54,9 @@ export const Team = () => {
                     />
 
                     <Tag style={{'backgroundColor': '#141416'}}
+                         additionalClass={isDesktop ? s.tag : ''}
                          variant='shade'
-                         size={isDesktop ? 'large' : 'medium'}>
+                         size={'medium'}>
                         {`${indexSlide + 1} из ${teamList.length}`}
                     </Tag>
 

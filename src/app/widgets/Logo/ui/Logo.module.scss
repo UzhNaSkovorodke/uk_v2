@@ -1,3 +1,5 @@
+@import "@/src/app/variables";
+
 .wrapper {
 	align-items: center;
 	gap: 8px;
@@ -21,5 +23,13 @@
 
 	&_white {
 		color: #ffffff;
+	}
+}
+@media(min-width: $laptop) {
+	.uk {
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 10px;
+		letter-spacing: -1%;
 	}
 }

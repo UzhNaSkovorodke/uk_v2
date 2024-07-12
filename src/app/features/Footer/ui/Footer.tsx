@@ -7,7 +7,6 @@ import {FormContext} from '@/src/app/providers/formProvider'
 import {useContext} from 'react'
 import Image from 'next/image'
 import {ModalForm} from '../../ModalForm'
-import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 interface IFooterProps {
     className?: string
@@ -15,7 +14,6 @@ interface IFooterProps {
 
 export const Footer = ({}: IFooterProps) => {
     const form = useContext(FormContext)
-    const {isMobile} = useClientWidth()
 
     const infoList = [
         {
@@ -45,7 +43,7 @@ export const Footer = ({}: IFooterProps) => {
                     <Logo
                         variant='white'
                         uk
-                        between={isMobile}
+                        isBtwMobile={true}
                     />
                 </Flex>
 

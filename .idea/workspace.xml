@@ -4,30 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/desktop Project, Service, Footer, Intro">
-      <change afterPath="$PROJECT_DIR$/public/hh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/introTestL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/introTestM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/introTestS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/projectTest1.png" afterDir="false" />
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/all ready without menu + ssr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/AboutCompany/ui/AboutCompany.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Intro/ui/Intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/News/ui/News.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/News/ui/News.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/News/ui/News.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/News/ui/News.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -175,7 +167,39 @@
       <option name="project" value="LOCAL" />
       <updated>1720448242116</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat/desktop Project, Service, Footer, Intro">
+      <option name="closed" value="true" />
+      <created>1720771116366</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720771116366</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat/all ready without menu + ssr">
+      <option name="closed" value="true" />
+      <created>1720780440512</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720780440512</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat/all ready without menu + ssr">
+      <option name="closed" value="true" />
+      <created>1720792548026</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720792548026</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat/all ready without menu + ssr">
+      <option name="closed" value="true" />
+      <created>1720794161039</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720794161039</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +236,7 @@
     <MESSAGE value="feat/desktop Intro, Services" />
     <MESSAGE value="feat/desktop ModalNews.tsx, ModalServices.tsx" />
     <MESSAGE value="feat/desktop Project, Service, Footer, Intro" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/desktop Project, Service, Footer, Intro" />
+    <MESSAGE value="feat/all ready without menu + ssr" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat/all ready without menu + ssr" />
   </component>
 </project>

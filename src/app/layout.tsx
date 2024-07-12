@@ -49,7 +49,7 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<FormProvider>
-				<body className={ttHovesPro.className}>
+				<body className={`${ttHovesPro.className} ${s.body}`}>
 					<Header />
 					<div className={s.contentWrapper}>{children}</div>
 					<Footer />

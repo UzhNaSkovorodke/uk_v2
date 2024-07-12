@@ -11,7 +11,7 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: #141416;
 
   text-align: center;
@@ -63,7 +63,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .imgSubTitle {
@@ -99,7 +99,7 @@
   .imgTitle {
     font-size: 40px;
     line-height: 40px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
   }
 
   .imgSubTitle {
@@ -133,6 +133,11 @@
   }
 
   @media(min-width: $desktop) {
+    .tag {
+      width: 88px;
+      padding: 12px 24px !important;
+    }
+
     .root {
       grid-template-columns: 1fr 2fr;
     }
@@ -147,7 +152,7 @@
     }
 
     .imageWrapper {
-      margin-bottom: 120px;
+      margin-bottom: 124px;
     }
 
     .imgTitle {
