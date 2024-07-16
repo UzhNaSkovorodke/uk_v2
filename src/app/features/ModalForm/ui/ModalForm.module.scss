@@ -1,95 +1,113 @@
+@import "@/src/app/variables";
+
 @mixin visuallyHiddenMix {
-	border: 0;
-	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .modal {
-	top: 56px;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	height: calc(100% - 56px);
+  flex-direction: column;
 
-	& form {
-		width: 100%;
-	}
+  & form {
+    width: 100%;
+  }
+}
+
+.modalBody {
+  width: 100%;
+  height: 100%;
 }
 
 .root {
-	width: 100%;
-	padding: 32px;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 64px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
 }
 
 .title {
-	font-size: 32px;
-	line-height: 32px;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	color: #141416;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #141416;
 }
 
 .description {
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #353945;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #353945;
 }
 
 .inputWrapper {
-	width: 100%;
-	flex-direction: column;
-	gap: 24px;
-	margin: 16px 0 0 0;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+  margin: 16px 0 0 0;
 }
 
 .checkboxLabel {
-	position: relative;
-	display: flex;
-	align-items: flex-start;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
 
-	& input {
-		@include visuallyHiddenMix;
-	}
+  & input {
+    @include visuallyHiddenMix;
+  }
 
-	&:has(input:not(:checked))::before,
-	&:has(input:checked)::after {
-		position: absolute;
-		content: '';
-		left: 0;
-		top: 0;
-		width: 20px;
-		height: 20px;
-		border-radius: 4px;
-		background: #e6e8ec;
-		border: 1px solid #b1b5c3;
-		z-index: 1;
-	}
+  &:has(input:not(:checked))::before,
+  &:has(input:checked)::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: #e6e8ec;
+    border: 1px solid #b1b5c3;
+    z-index: 1;
+  }
 
-	&:has(input:checked)::after {
-		background: #141416;
-		border: 1px solid #141416;
-	}
+  &:has(input:checked)::after {
+    background: #141416;
+    border: 1px solid #141416;
+  }
 }
 
 .labelText {
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: 400;
-	padding-left: 32px;
-	color: #777e90;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding-left: 32px;
+  color: #777e90;
 }
 
 .modalBtn {
-	margin: 24px 0 0 0;
+  margin: 24px 0 0 0;
+}
+
+@media (min-width: $laptop) {
+  .modalBody {
+    width: unset;
+    height: unset;
+  }
+
+  .root {
+    border-radius: 32px;
+    width: 442px;
+    height: 552px;
+  }
 }

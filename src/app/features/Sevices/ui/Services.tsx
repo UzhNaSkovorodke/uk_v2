@@ -2,7 +2,6 @@
 import {Button, Flex, NewIcon, Text} from 'stone-kit'
 import {useContext, useEffect, useState} from 'react'
 import {ModalServices} from '../../ModalServices'
-import {ModalForm} from '../../ModalForm'
 import {FormContext} from '@/src/app/providers/formProvider/ui/formProvider'
 import s from './Services.module.scss'
 import Image from 'next/image'
@@ -11,7 +10,6 @@ import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 export const Services = ({}) => {
     const form = useContext(FormContext)
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-    const {isFormModalOpen, setIsFormModalOpen} = form
     const [activeService, setActiveService] = useState<number>(0)
     const {isMobile, isDesktop} = useClientWidth()
 
@@ -128,12 +126,7 @@ export const Services = ({}) => {
                 setIsModalOpen={setIsModalOpen}
                 service={servicesList[activeService]}
             />
-            {isFormModalOpen && (
-                <ModalForm
-                    isFormOpen={isFormModalOpen}
-                    setIsFormOpen={setIsFormModalOpen}
-                />
-            )}
+
         </Flex>
     )
 }

@@ -6,7 +6,6 @@ import {YandexMap} from '@/src/app/widgets/YandexMap'
 import {FormContext} from '@/src/app/providers/formProvider'
 import {useContext} from 'react'
 import Image from 'next/image'
-import {ModalForm} from '../../ModalForm'
 
 interface IFooterProps {
     className?: string
@@ -91,12 +90,12 @@ export const Footer = ({}: IFooterProps) => {
 
             <YandexMap/>
 
-            {form && (
-                <ModalForm
-                    isFormOpen={form.isFormModalOpen}
-                    setIsFormOpen={form?.setIsFormModalOpen}
-                />
-            )}
+            {/*{form && (*/}
+            {/*    <ModalForm*/}
+            {/*        isFormOpen={form.isFormModalOpen}*/}
+            {/*        setIsFormOpen={form?.setIsFormModalOpen}*/}
+            {/*    />*/}
+            {/*)}*/}
 
 
         </Flex>

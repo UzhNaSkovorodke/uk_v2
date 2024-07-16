@@ -27,13 +27,13 @@ export const Team = () => {
 
     const teamList = [
         {
-            imgTitle: 'Ирина Севалкина ',
-            imgSubtitle: 'Генеральный директор',
+            imgTitle: 'Виктория Васильева',
+            imgSubtitle: 'Заместитель Ген дир',
             image: '/team1.jpg',
         },
         {
-            imgTitle: 'Не Севалкина ',
-            imgSubtitle: 'Генеральный директор',
+            imgTitle: 'Рубен Аракелян',
+            imgSubtitle: 'Партнер',
             image: '/team2.jpg',
         },
     ]

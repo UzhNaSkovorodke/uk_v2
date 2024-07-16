@@ -1,18 +1,21 @@
 'use client'
 import {Logo} from '@/src/app/widgets/Logo'
 import {Flex, Modal, NewIcon} from 'stone-kit'
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import s from './Header.module.scss'
 import Button from '@/src/app/widgets/Button'
 import RightButtons from "@/src/app/features/Header/RightButton/ui/RightButton";
 import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 import {useScrollPosition} from "@/src/app/widgets/hooks/useScrollPosition";
+import {ModalForm} from "@/src/app/features/ModalForm";
+import {FormContext} from "@/src/app/providers/formProvider";
 
 export const Header = ({}) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
     const {isMobile} = useClientWidth()
     const scrollPosition = useScrollPosition()
 
+    const form = useContext(FormContext)
     const menuList = [
         {
             title: 'Услуги',
@@ -121,6 +124,12 @@ export const Header = ({}) => {
                 </Flex>
             </Modal>
 
+            {form && (
+                <ModalForm
+                    isFormOpen={form.isFormModalOpen}
+                    setIsFormOpen={form?.setIsFormModalOpen}
+                />
+            )}
 
         </div>
     )
