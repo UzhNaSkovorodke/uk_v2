@@ -93,6 +93,15 @@
 display: none;
 }
 
+.newHeader{
+  background: white;
+
+  .menuText{
+    color: black;
+  }
+}
+
+
 @media(min-width: $laptop) {
   .modal {
     top: 0;
@@ -111,7 +120,7 @@ display: none;
     display: none;
   }
   .root {
-    padding: 32px 40px;
+    padding: 18px 40px;
   }
   .btn {
     width: 135px;
@@ -142,6 +151,9 @@ display: none;
     gap: 32px;
   }
 
+  .newHeader{
+    padding: 18px 40px;
+  }
 }
 
 @media (min-width: $desktop) {
@@ -151,6 +163,7 @@ display: none;
     padding-left: 80px;
   }
   .menuText {
+    text-decoration: none;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.015em;

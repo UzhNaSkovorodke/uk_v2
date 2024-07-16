@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="fix/modal content">
+      <change afterPath="$PROJECT_DIR$/src/app/widgets/hooks/useScrollPosition.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Projects/ui/Projects.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ktiukalov &lt;tiukalov@realx.tech&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -70,7 +79,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat/SP-388",
-    "last_opened_file_path": "C:/Code/stone-portal-front",
+    "last_opened_file_path": "C:/Code/uk-stone-v2-front/src/app/widgets/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +101,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Code\uk-stone-v2-front\src\app\widgets\hooks" />
       <recent name="C:\Code\uk-stone-v2-front\public" />
       <recent name="C:\Code\uk-stone-v2-front\src\app\shared" />
       <recent name="C:\Code\uk-stone-v2-front\src\app" />
@@ -130,7 +140,7 @@
       <workItem from="1721055420947" duration="3660000" />
       <workItem from="1721059120942" duration="759000" />
       <workItem from="1721115227262" duration="2912000" />
-      <workItem from="1721131913267" duration="1734000" />
+      <workItem from="1721131913267" duration="4222000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
@@ -228,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721121090484</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix/modal content">
+      <option name="closed" value="true" />
+      <created>1721133770593</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721133770593</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

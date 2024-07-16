@@ -46,7 +46,7 @@ export const Projects = ({}: IProjectsProps) => {
     ]
 
     return (
-        <div className={s.root}>
+        <div className={s.root} id={'#projects'}>
             <Swiper
                 className={s.slider}
                 ref={swiperRef}

@@ -1,15 +1,17 @@
 'use client'
 import {Logo} from '@/src/app/widgets/Logo'
-import {Flex, Modal, NewIcon, Text} from 'stone-kit'
+import {Flex, Modal, NewIcon} from 'stone-kit'
 import {useState} from 'react'
 import s from './Header.module.scss'
 import Button from '@/src/app/widgets/Button'
 import RightButtons from "@/src/app/features/Header/RightButton/ui/RightButton";
 import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
+import {useScrollPosition} from "@/src/app/widgets/hooks/useScrollPosition";
 
 export const Header = ({}) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
     const {isMobile} = useClientWidth()
+    const scrollPosition = useScrollPosition()
 
     const menuList = [
         {
@@ -44,12 +46,14 @@ export const Header = ({}) => {
 
     if (!menuList) return null
     return (
-        <div className={`${s.root} ${(isModalOpen && isMobile) ? s.whiteHeader : ''}`}>
+        <div
+            className={`${s.root} ${(isModalOpen && isMobile) ? s.whiteHeader : ''} ${scrollPosition !== 0 ? s.newHeader : ''}`}>
             <Flex className={s.logoMenu}>
-                <Logo uk={true} variant={(isModalOpen && isMobile) ? 'black' : 'white'}/>
+                <Logo uk={true} variant={(isModalOpen && isMobile) || (scrollPosition !== 0) ? 'black' : 'white'}/>
 
                 <div className={s.menuTextWrapper}>
-                    {menuList.map((e, i) => <Text className={s.menuText} key={i} html={e.title}/>
+                    {menuList.map((e, i) => <a className={s.menuText} key={i} href={e.link}
+                                               dangerouslySetInnerHTML={{__html: e.title}}/>
                     )}</div>
             </Flex>
 
@@ -107,7 +111,7 @@ export const Header = ({}) => {
                     </Flex>
                     <Button
                         as='link'
-                        href='https://stone.ru'
+                        href='https://lk.stonepm.ru/'
                         variant='black'
                         size='large'
                         width='full'
