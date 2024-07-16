@@ -50,7 +50,7 @@ export const Footer = ({}: IFooterProps) => {
                 <Flex className={s.btnWrapper}>
                     <Button
                         as='link'
-                        href='https://hh.ru'
+                        href='https://hh.ru/employer/109654'
                         variant='shade'
                         width='full'
                         size='large'

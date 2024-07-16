@@ -11,63 +11,63 @@ export const ModalNews = ({isModalOpen, setIsModalOpen, news}: IModalNewsProps) 
     return (
         <Modal
             isOpen={isModalOpen}
-            emitIsOpen={setIsModalOpen}
-            additionalClass={s.modal}>
-            <Flex className={s.modalContent}>
-                <Flex className={s.modalHeader}>
-                    <Logo
-                        variant='black'
-                        uk
+            emitIsOpen={() => setIsModalOpen(false)}
+            additionalClass={s.modal}
+            additionalClassModalBody={s.modalContent}
+        >
+            <Flex className={s.modalHeader}>
+                <Logo
+                    variant='black'
+                    uk
+                />
+                <Button
+                    variant='gray'
+                    as='button'
+                    size='small'
+                    onClick={() => setIsModalOpen(false)}>
+                    <NewIcon
+                        name='close'
+                        size='16'
                     />
+                </Button>
+            </Flex>
+            <Flex className={s.modalBody}>
+                <div className={s.img}>
+                    <Image
+                        src={pageImage}
+                        fill alt='фото новости'
+                    />
+
                     <Button
+                        additionalClass={s.close}
                         variant='gray'
                         as='button'
-                        size='small'
+                        size='medium'
                         onClick={() => setIsModalOpen(false)}>
                         <NewIcon
                             name='close'
                             size='16'
                         />
                     </Button>
-                </Flex>
-                <Flex className={s.modalBody}>
-                    <div className={s.img}>
-                        <Image
-                            src={pageImage}
-                            fill alt='фото новости'
-                        />
+                </div>
 
-                        <Button
-                            additionalClass={s.close}
-                            variant='gray'
-                            as='button'
-                            size='medium'
-                            onClick={() => setIsModalOpen(false)}>
-                            <NewIcon
-                                name='close'
-                                size='16'
-                            />
-                        </Button>
-                    </div>
-
-                    <div className={s.textWrap}>
-                        <Text
-                            className={s.textTitle}
-                            html={title}
-                        />
-                        <Text
-                            className={s.textDate}
-                            html={date}
-                        />
-                        <Text
-                            className={s.subTitle}
-                            html={subTitle}
-                        />
-                        <Text
-                            className={s.textValue}
-                            html={text}
-                        /></div>
-                </Flex>
+                <div className={s.textWrap}>
+                    <Text
+                        className={s.textTitle}
+                        html={title}
+                    />
+                    <Text
+                        className={s.textDate}
+                        html={date}
+                    />
+                    <Text
+                        className={s.subTitle}
+                        html={subTitle}
+                    />
+                    <Text
+                        className={s.textValue}
+                        html={text}
+                    /></div>
             </Flex>
         </Modal>
     )

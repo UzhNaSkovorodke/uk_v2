@@ -1,17 +1,15 @@
 'use client'
 import {Logo} from '@/src/app/widgets/Logo'
 import {Flex, Modal, NewIcon, Text} from 'stone-kit'
-import {useContext, useState} from 'react'
+import {useState} from 'react'
 import s from './Header.module.scss'
-import {FormContext} from '@/src/app/providers/formProvider/ui/formProvider'
 import Button from '@/src/app/widgets/Button'
+import RightButtons from "@/src/app/features/Header/RightButton/ui/RightButton";
 import {useClientWidth} from "stone-kit/dist/shared/useClientWidth";
 
 export const Header = ({}) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-    const form = useContext(FormContext)
-
-    const {isDesktop} = useClientWidth()
+    const {isMobile} = useClientWidth()
 
     const menuList = [
         {
@@ -46,73 +44,52 @@ export const Header = ({}) => {
 
     if (!menuList) return null
     return (
-        <div className={`${s.root} ${isModalOpen ? s.white : ''}`}>
-            <Flex>
-                <Logo uk={true} variant={isModalOpen ? 'black' : 'white'}/>
+        <div className={`${s.root} ${(isModalOpen && isMobile) ? s.whiteHeader : ''}`}>
+            <Flex className={s.logoMenu}>
+                <Logo uk={true} variant={(isModalOpen && isMobile) ? 'black' : 'white'}/>
 
                 <div className={s.menuTextWrapper}>
                     {menuList.map((e, i) => <Text className={s.menuText} key={i} html={e.title}/>
                     )}</div>
             </Flex>
 
-            <Flex className={s.menuBtn}>
-                <Button additionalClass={s.phone}
-                        variant='blue'
-                        as='link'
-                        href='tel:88007752471'>
-                    <NewIcon
-                        name='phoneFilled'
-                        size='16'
-                    />
-                </Button>
-
-                <Button
-                    width='full'
-                    variant='blue'
-                    as='button'
-                    size={isDesktop ? 'medium' : 'medium'}
-                    additionalClass={`${s.btn} ${s.btn_call}`}
-                    post={
-                        <NewIcon
-                            name='arrowLong'
-                            deg='-90'
-                            color='white'
-                        />
-                    }
-                    onClick={() => form?.setIsFormModalOpen(true)}>
-                    Оставить обращение
-                </Button>
-
-                <Button
-                    variant='gray'
-                    as='link'
-                    href='https://stone.ru'>
-                    <NewIcon
-                        name='user'
-                        color='#141416'
-                        size='16'
-                    />
-                </Button>
-                <Button
-                    variant='gray'
-                    as='button'
-                    onClick={() => {
-                        !form?.isFormModalOpen && setIsModalOpen((prev) => !prev)
-                        form?.isFormModalOpen && form?.setIsFormModalOpen((prev) => !prev)
-                    }}>
-                    <NewIcon
-                        name={isModalOpen || form?.isFormModalOpen ? 'burgerClose' : 'burger'}
-                        color='#141416'
-                        size='16'
-                    />
-                </Button>
-            </Flex>
+            <RightButtons setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen}/>
 
             <Modal
                 isOpen={isModalOpen}
-                emitIsOpen={() => setIsModalOpen}
-                additionalClass={s.modal}>
-                <Flex additionalClass={s.modalContent}>
+                emitIsOpen={() => setIsModalOpen(false)}
+                additionalClass={s.modal}
+                additionalClassModalBody={`${s.modalBody}`}>
+                <Flex additionalClass={`${s.modalContent} ${s.modalMobile}`}>
+                    {!isMobile && <RightButtons setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen}/>}
+
+                    <Flex
+                        fd='column'
+                        additionalClass={s.menuList}>
+                        {menuList.map((m, i) => {
+                            return (
+                                <a
+                                    key={i}
+                                    href={m.link}
+                                    className={s.menuItem}
+                                    onClick={() => setIsModalOpen(false)}>
+                                    {m.title}
+                                </a>
+                            )
+                        })}
+                    </Flex>
+                    <Button
+                        as='link'
+                        href='http://lk.stonepm.ru/'
+                        variant='black'
+                        size='large'
+                        width='full'
+                        post={<NewIcon name='user'/>}>
+                        Войти в кабинет
+                    </Button>
+                </Flex>
+
+                <Flex additionalClass={s.modalTablet}>
                     <Flex
                         fd='column'
                         additionalClass={s.menuList}>
@@ -139,6 +116,8 @@ export const Header = ({}) => {
                     </Button>
                 </Flex>
             </Modal>
+
+
         </div>
     )
 }

@@ -1,2 +1,16 @@
 .body {
 }
+.header{
+  display: flex;
+  justify-content: center;
+}
+.footer{
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+.contentWrapper{
+  background: black;
+  display: flex;
+  justify-content: center;
+}

@@ -81,7 +81,7 @@ export const Services = ({}) => {
             </Flex>
             <Flex className={s.cards}>
                 {servicesList.map((e, i) => {
-                    return <div key={i} className={s.cardWrapper} style={e.isGradient ?  {
+                    return <div key={i} className={s.cardWrapper} style={e.isGradient ? {
                         background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%)'
                     } : {}}>
                         <Image fill={true}

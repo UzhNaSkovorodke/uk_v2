@@ -4,6 +4,7 @@
 .modalContent {
   flex-direction: column;
   padding: 0 0 40px 0;
+  background: white;
   height: 100%;
 }
 
@@ -14,11 +15,11 @@
 }
 
 .modalBody {
-  height: 100%;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 0;
+  background: white;
 }
 
 .img {
@@ -92,7 +93,7 @@
     order: 2;
     min-height: unset;
     width: 50%;
-    height: 100%;
+    height: 100vh;
   }
 
   .close {

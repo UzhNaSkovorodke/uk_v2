@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/all ready without menu + ssr">
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="fix/modal content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -71,12 +70,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat/SP-388",
-    "last_opened_file_path": "C:/Code",
+    "last_opened_file_path": "C:/Code/stone-portal-front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
     "ts.external.directory.path": "C:\\Code\\uk-stone-v2-front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -98,6 +98,13 @@
       <recent name="C:\Code\uk-stone-v2-front\src\styles" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -118,6 +125,12 @@
       <workItem from="1720515844221" duration="13181000" />
       <workItem from="1720536194584" duration="3096000" />
       <workItem from="1720702948285" duration="9414000" />
+      <workItem from="1721026941573" duration="11070000" />
+      <workItem from="1721054964911" duration="448000" />
+      <workItem from="1721055420947" duration="3660000" />
+      <workItem from="1721059120942" duration="759000" />
+      <workItem from="1721115227262" duration="2912000" />
+      <workItem from="1721131913267" duration="1734000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
@@ -199,7 +212,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720794161039</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat/all ready without menu + ssr">
+      <option name="closed" value="true" />
+      <created>1720796379277</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720796379277</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix/modal content">
+      <option name="closed" value="true" />
+      <created>1721121090484</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721121090484</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +266,7 @@
     <MESSAGE value="feat/desktop ModalNews.tsx, ModalServices.tsx" />
     <MESSAGE value="feat/desktop Project, Service, Footer, Intro" />
     <MESSAGE value="feat/all ready without menu + ssr" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/all ready without menu + ssr" />
+    <MESSAGE value="fix/modal content" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix/modal content" />
   </component>
 </project>

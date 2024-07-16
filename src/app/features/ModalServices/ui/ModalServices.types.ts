@@ -1,6 +1,8 @@
+import {Dispatch, SetStateAction} from "react";
+
 export interface IModalServicesProps {
 	isModalOpen: boolean
-	setIsModalOpen: (isOpen: boolean) => void
+	setIsModalOpen: Dispatch<SetStateAction<boolean>>
 	service: {
 		title: string
 		description: string
