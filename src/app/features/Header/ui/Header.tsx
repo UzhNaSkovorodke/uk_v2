@@ -1,6 +1,5 @@
 'use client'
-import {Logo} from '@/src/app/widgets/Logo'
-import {Flex, Modal, NewIcon} from 'stone-kit'
+import {Flex, Logo, Modal, NewIcon} from 'stone-kit'
 import {useContext, useState} from 'react'
 import s from './Header.module.scss'
 import Button from '@/src/app/widgets/Button'

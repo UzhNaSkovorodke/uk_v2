@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/dynamic header">
+    <list default="true" id="67e1be2a-28b7-41e0-a690-afefa73a3ece" name="Changes" comment="feat/modal form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Footer/ui/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Header/ui/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/ModalForm/ui/ModalForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/ModalForm/ui/ModalForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/ModalForm/ui/ModalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/ModalForm/ui/ModalForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Sevices/ui/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/Team/ui/Team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,22 +74,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat/SP-388",
-    "last_opened_file_path": "C:/Code/uk-stone-v2-front/src/app/widgets/hooks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "ts.external.directory.path": "C:\\Code\\uk-stone-v2-front\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/SP-388&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Code/viteKit&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Code\\uk-stone-v2-front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -142,7 +140,17 @@
       <workItem from="1721055420947" duration="3660000" />
       <workItem from="1721059120942" duration="759000" />
       <workItem from="1721115227262" duration="2912000" />
-      <workItem from="1721131913267" duration="7366000" />
+      <workItem from="1721131913267" duration="7668000" />
+      <workItem from="1721210447430" duration="775000" />
+      <workItem from="1721211255823" duration="2662000" />
+      <workItem from="1721218130464" duration="37000" />
+      <workItem from="1721218204036" duration="2544000" />
+      <workItem from="1721288093617" duration="118000" />
+      <workItem from="1721289542608" duration="149000" />
+      <workItem from="1721296031201" duration="19000" />
+      <workItem from="1721305227829" duration="2223000" />
+      <workItem from="1721371982923" duration="592000" />
+      <workItem from="1721394484425" duration="2725000" />
     </task>
     <task id="LOCAL-00001" summary="feat/mobile Projects, AboutCompany">
       <option name="closed" value="true" />
@@ -256,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721136251906</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat/modal form">
+      <option name="closed" value="true" />
+      <created>1721145722811</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721145722811</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +312,7 @@
     <MESSAGE value="feat/all ready without menu + ssr" />
     <MESSAGE value="fix/modal content" />
     <MESSAGE value="feat/dynamic header" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/dynamic header" />
+    <MESSAGE value="feat/modal form" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat/modal form" />
   </component>
 </project>
